@@ -1,0 +1,78 @@
+=========================================================ADMIN===============================================================
+
+POST localhost://api/v1/personas		//Agregar una persona
+{
+	"rut" : "19121033-6",
+	"Nombre" : "PATRICIO ANDRES",
+	"apellido" : "GONZALEZ CAMILO",
+	"direccion" : "CALLE 1",
+	"edad" : "22",
+	"tipoUsuario_fk" : "1",
+	"paisRecidencia_fk" : "1",
+	"nacionalidad_fk" : "1",
+	"codigo" : "201",
+}
+
+GET localhost://api/v1/personas/1            	//obtener persona con id 1
+{
+	"rut" : "19121033-6",
+	"Nombre" : "PATRICIO ANDRES",
+	"apellido" : "GONZALEZ CAMILO",
+	"direccion" : "CALLE 1",
+	"edad" : "22",
+	"tipoUsuario_fk" : "1",
+	"paisRecidencia_fk" : "1",
+	"nacionalidad_fk" : "1",
+}
+
+POST localhost://api/v1/candidatos		//agregar un candidato
+
+{
+	"id" : "ID",
+	"partido_fk" : "1",
+	"persona_fk" : "22-2"
+	"codigo" : "201"
+}
+
+POST localhost://api/v1/votos			//agregar un voto
+
+{
+	"id" : "1"
+	"fecha_voto" : "2018-02-05 "
+	"votante_fk" : "22-2",
+	"candidato_fk" : "55-5"
+}
+
+POST localhost://api/v1/partidos		//agregar un partido
+{
+	"id" : "1",
+	"descripcion" : "algo",
+	"fundacion" : "2010",
+}
+
+
+GET localhost://api/v1/lista_candidatos		//obtiene lista de candidatos
+{
+	"listaCandidatos" : [{
+		"partido_fk" : "1",
+		"persona_fk" : "22-2",
+		"codigo" : "201",
+	},{
+		"partido_fk" : "2",
+		"persona_fk" : "55-2",
+		"codigo" : "201",
+	}
+
+	]	
+
+}
+
+GET localhost://api/v1/lista_candidatos/22-2	//obtiene un candidato segun rut candidato
+{
+	"listaCandidatos" :{
+		"partido_fk" : "1",
+		"persona_fk" : "22-2",
+		"codigo" : "201",
+	}	
+
+}
