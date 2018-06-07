@@ -1,0 +1,128 @@
+POST localhost://api/v1/personas		//Agregar una persona.
+{
+	"rut" : "19121033-6",
+	"Nombre" : "PATRICIO ANDRES",
+	"apellido" : "GONZALEZ CAMILO",
+	"direccion" : "CALLE 1",
+	"edad" : "22",
+	"tipoUsuario_fk" : "1",
+	"paisRecidencia_fk" : "1",
+	"nacionalidad_fk" : "1",
+}
+
+Posible respuesta
+
+{
+	"codigo" : "0",
+	"informacion" : "Registro exitoso",
+}
+
+{
+	"codigo" : "1",
+	"informacion" : "La persona ya se encuentra registrada",
+}
+
+
+GET localhost://api/v1/personas/1            	//obtener persona con id 1.
+{
+	"rut" : "19121033-6",
+	"Nombre" : "PATRICIO ANDRES",
+	"apellido" : "GONZALEZ CAMILO",
+	"direccion" : "CALLE 1",
+	"edad" : "22",
+	"tipoUsuario_fk" : "1",
+	"paisRecidencia_fk" : "1",
+	"nacionalidad_fk" : "1",
+}
+
+Posible respuesta
+{
+	"codigo" : "3",
+	"informacion" : "No se encuentra la persona",
+}
+
+PUT localhost://api/v1/personas/1            	//modificar persona con id 1.
+{
+	"direccion" : "CALLE 1",
+	"tipoUsuario_fk" : "1",
+	"paisRecidencia_fk" : "1",
+}
+
+Posible respuesta
+{
+	"codigo" : "3",
+	"informacion" : "No se encuentra la persona",
+}
+
+{
+	"codigo" : "4",
+	"informacion" : "Datos invalidos",
+}
+
+
+POST localhost://api/v1/candidatos		//agregar un candidato.
+
+{
+	"id" : "ID",
+	"partido_fk" : "1",
+	"persona_fk" : "22-2"
+	"codigo" : "201"
+}
+
+Posible respuesta
+{
+	"codigo" : "0",
+	"informacion" : "Registro exitoso",
+}
+
+{
+	"codigo" : "5",
+	"informacion" : "El candidato ya se encuentra registrado",
+}
+
+GET localhost://api/v1/candidatos/1		//obtener candidatos con id 1.
+
+{
+	"id" : "ID",
+	"partido_fk" : "1",
+	"persona_fk" : "22-2"
+	"codigo" : "201"
+}
+
+Posible respuesta
+{
+	"codigo" : "6",
+	"informacion" : "No se encuentra el candidato",
+}
+
+
+POST localhost://api/v1/partidos		//agregar un partido.
+{
+	"id" : "1",
+	"descripcion" : "algo",
+	"fundacion" : "2010",
+}
+
+Posible respuesta
+{
+	"codigo" : "0",
+	"informacion" : "Registro exitoso",
+}
+
+{
+	"codigo" : "7",
+	"informacion" : "Partido ya se encuentra registrado",
+}
+
+
+GET localhost://api/v1/partidos		//Obtener partidos.
+{
+	"id" : "1",
+	"descripcion" : "algo",
+	"fundacion" : "2010",
+}
+
+
+
+
+

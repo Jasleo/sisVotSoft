@@ -1,0 +1,64 @@
+CLIENTE
+
+GET localhost://api/v1/lista_candidatos			//obtiene lista de candidatos
+{
+	"listaCandidatos" : [{
+		"partido_fk" : "1",
+		"persona_fk" : "22-2",
+	},{
+		"partido_fk" : "2",
+		"persona_fk" : "55-2",
+	}
+
+	]	
+
+}
+
+Posible respuesta
+
+{
+	"codigo" : "8",
+	"informacion" : "Lista de candidatos no encontrada",
+}
+
+GET localhost://api/v1/lista_candidatos/22-2	//obtiene un candidato segun rut candidato
+{
+	"listaCandidatos" :{
+		"partido_fk" : "1",
+		"persona_fk" : "22-2",
+		"codigo" : "201",
+	}	
+
+}
+
+Posible respuesta
+
+{
+	"codigo" : "9",
+	"informacion" : "El candidato no se encuentra",
+}
+
+POST localhost://api/v1/votos					//agregar un voto
+
+{
+	"id" : "1"
+	"fecha_voto" : "2018-02-05"
+	"votante_fk" : "22-2",
+	"candidato_fk" : "55-5"
+}
+Posible respuesta
+
+{
+	"codigo" : "0",
+	"informacion" : "Voto registrado exitosamente",
+}
+
+{
+	"codigo" : "10",
+	"informacion" : "Ya se ha registrado un voto",
+}
+
+{
+	"codigo" : "11",
+	"informacion" : "Usuario no habilitado para votar",
+}
