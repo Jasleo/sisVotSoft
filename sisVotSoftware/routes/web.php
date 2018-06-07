@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/api/personas', function () use ($router) {
+    return $results = DB::select("SELECT * FROM persona");
+});
