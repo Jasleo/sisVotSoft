@@ -52,8 +52,7 @@ CREATE TABLE candidato(
     persona_fk VARCHAR(100) UNIQUE,
     PRIMARY KEY (id),
     FOREIGN KEY(partido_fk)        REFERENCES partido(id),
-    FOREIGN KEY(persona_fk)        REFERENCES persona(rut),
-    
+    FOREIGN KEY(persona_fk)        REFERENCES persona(rut)    
 );
 
 
