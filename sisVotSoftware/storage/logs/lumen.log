@@ -1832,3 +1832,1024 @@ loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\s
 loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\public\\index.php(28): Laravel\\Lumen\\Application->run()
 #17 {main}
 "} 
+[2018-06-12 09:29:43] production.ERROR: Symfony\Component\Console\Exception\RuntimeException: The "-c" option does not exist. in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php:124
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(105): Symfony\Component\Console\Input\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(84): Symfony\Component\Console\Input\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(210): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-c\" option does not exist. at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php:124)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(105): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(84): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(210): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2018-06-12 09:29:51] production.ERROR: Symfony\Component\Console\Exception\RuntimeException: The "-c" option does not exist. in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php:124
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(105): Symfony\Component\Console\Input\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(84): Symfony\Component\Console\Input\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(210): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-c\" option does not exist. at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php:124)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(105): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(84): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(210): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2018-06-12 09:36:40] production.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "make:migrations" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php:632
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(226): Symfony\Component\Console\Application->find('make:migrations')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrations\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('make:migrations')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-06-12 09:37:04] production.ERROR: Symfony\Component\Console\Exception\RuntimeException: The "-c" option does not exist. in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php:124
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(105): Symfony\Component\Console\Input\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(84): Symfony\Component\Console\Input\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(210): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-c\" option does not exist. at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php:124)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(105): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(84): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(210): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2018-06-12 09:38:55] production.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "make:migrations" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php:632
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(226): Symfony\Component\Console\Application->find('make:migrations')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrations\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('make:migrations')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-06-12 09:39:03] production.ERROR: Symfony\Component\Console\Exception\RuntimeException: Too many arguments, expected arguments "command" "name". in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php:182
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(86): Symfony\Component\Console\Input\ArgvInput->parseArgument('create=nacional...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(210): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Too many arguments, expected arguments \"command\" \"name\". at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php:182)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(86): Symfony\\Component\\Console\\Input\\ArgvInput->parseArgument('create=nacional...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(210): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 {main}
+"} 
+[2018-06-12 09:47:05] production.ERROR: Symfony\Component\Console\Exception\RuntimeException: The "-c" option does not exist. in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php:124
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(105): Symfony\Component\Console\Input\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\ArgvInput.php(84): Symfony\Component\Console\Input\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Input\Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(210): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateMakeCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"-c\" option does not exist. at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php:124)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(105): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOptionSet('create=nacional...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\ArgvInput.php(84): Symfony\\Component\\Console\\Input\\ArgvInput->parseShortOption('-create=naciona...')
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Input\\Input.php(55): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(210): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateMakeCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2018-06-12 10:27:31] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '=', expecting '{' in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_094633_create_nacionalidad_table-create=nacionalidad.php:7
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(447): Illuminate\Filesystem\Filesystem->requireOnce('C:\\Users\\nloyol...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(89): Illuminate\Database\Migrations\Migrator->requireFiles(Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '=', expecting '{' at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_094633_create_nacionalidad_table-create=nacionalidad.php:7)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(447): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\Users\\\
+loyol...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(89): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2018-06-12 10:29:03] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_094954_create_persona_table.php:23
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(447): Illuminate\Filesystem\Filesystem->requireOnce('C:\\Users\\nloyol...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(89): Illuminate\Database\Migrations\Migrator->requireFiles(Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR) at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_094954_create_persona_table.php:23)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(447): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\Users\\\
+loyol...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(89): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2018-06-12 10:29:55] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_095014_create_candidato_table.php:19
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(447): Illuminate\Filesystem\Filesystem->requireOnce('C:\\Users\\nloyol...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(89): Illuminate\Database\Migrations\Migrator->requireFiles(Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR) at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_095014_create_candidato_table.php:19)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(447): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\Users\\\
+loyol...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(89): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2018-06-12 10:30:39] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_095014_create_candidato_table.php:19
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(447): Illuminate\Filesystem\Filesystem->requireOnce('C:\\Users\\nloyol...')
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(89): Illuminate\Database\Migrations\Migrator->requireFiles(Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '->' (T_OBJECT_OPERATOR) at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_095014_create_candidato_table.php:19)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(447): Illuminate\\Filesystem\\Filesystem->requireOnce('C:\\\\Users\\\
+loyol...')
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(89): Illuminate\\Database\\Migrations\\Migrator->requireFiles(Array)
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#3 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 {main}
+"} 
+[2018-06-12 10:31:19] production.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php:458
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(458): PDOStatement->execute()
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('create table `n...', Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(459): Illuminate\Database\Connection->run('create table `n...', Array, Object(Closure))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Blueprint.php(88): Illuminate\Database\Connection->statement('create table `n...')
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(252): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(165): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Database\Schema\Builder->create('nacionalidad', Object(Closure))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(359): CreateNacionalidadTable->up()
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(366): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(177): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('C:\\Users\\nloyol...', 1, false)
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#29 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists (SQL: create table `nacionalidad` (`id` int unsigned not null auto_increment primary key, `descripcion` varchar(255) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php:664
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(459): Illuminate\Database\Connection->run('create table `n...', Array, Object(Closure))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Blueprint.php(88): Illuminate\Database\Connection->statement('create table `n...')
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(252): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(165): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Database\Schema\Builder->create('nacionalidad', Object(Closure))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(359): CreateNacionalidadTable->up()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(366): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(177): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('C:\\Users\\nloyol...', 1, false)
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main} {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists (SQL: create table `nacionalidad` (`id` int unsigned not null auto_increment primary key, `descripcion` varchar(255) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php:458)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(459): Illuminate\\Database\\Connection->run('create table `n...', Array, Object(Closure))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('create table `n...')
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('nacionalidad', Object(Closure))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(359): CreateNacionalidadTable->up()
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\
+loyol...', 1, false)
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-06-12 10:32:16] production.ERROR: PDOException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php:458
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(458): PDOStatement->execute()
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('create table `n...', Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(459): Illuminate\Database\Connection->run('create table `n...', Array, Object(Closure))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Blueprint.php(88): Illuminate\Database\Connection->statement('create table `n...')
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(252): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(165): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Database\Schema\Builder->create('nacionalidad', Object(Closure))
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(359): CreateNacionalidadTable->up()
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(366): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(177): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('C:\\Users\\nloyol...', 1, false)
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#15 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#29 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists (SQL: create table `nacionalidad` (`id` int unsigned not null auto_increment primary key, `descripcion` varchar(255) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php:664
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(459): Illuminate\Database\Connection->run('create table `n...', Array, Object(Closure))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Blueprint.php(88): Illuminate\Database\Connection->statement('create table `n...')
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(252): Illuminate\Database\Schema\Blueprint->build(Object(Illuminate\Database\MySqlConnection), Object(Illuminate\Database\Schema\Grammars\MySqlGrammar))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(165): Illuminate\Database\Schema\Builder->build(Object(Illuminate\Database\Schema\Blueprint))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Database\Schema\Builder->create('nacionalidad', Object(Closure))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(359): CreateNacionalidadTable->up()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(366): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(177): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('C:\\Users\\nloyol...', 1, false)
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 {main} {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists (SQL: create table `nacionalidad` (`id` int unsigned not null auto_increment primary key, `descripcion` varchar(255) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'nacionalidad' already exists at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php:458)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `n...', Array, Object(Closure))
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(459): Illuminate\\Database\\Connection->run('create table `n...', Array, Object(Closure))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Blueprint.php(88): Illuminate\\Database\\Connection->statement('create table `n...')
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('nacionalidad', Object(Closure))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_093914_create_nacionalidad_table.php(19): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(359): CreateNacionalidadTable->up()
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateNacionalidadTable), 'up')
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\
+loyol...', 1, false)
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#17 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#18 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#19 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-06-12 10:34:02] production.ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php:68
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php(68): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(915): call_user_func(Object(Closure))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(940): Illuminate\Database\Connection->getPdo()
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(399): Illuminate\Database\Connection->getReadPdo()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(325): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from i...', Array)
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(333): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\DatabaseMigrationRepository.php(169): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(545): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(97): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(63): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#29 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#30 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#31 {main} {"exception":"[object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\Connector.php:68)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\Connector.php(68): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\Connector.php(44): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\ConnectionFactory.php(183): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(915): call_user_func(Object(Closure))
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(940): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(399): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(325): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(657): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(545): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(97): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#21 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#22 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#23 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 {main}
+"} 
+[2018-06-12 10:34:02] production.ERROR: PDOException: SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php:68
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php(68): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\Connector.php(44): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connectors\ConnectionFactory.php(183): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(915): call_user_func(Object(Closure))
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(940): Illuminate\Database\Connection->getPdo()
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(399): Illuminate\Database\Connection->getReadPdo()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(325): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(657): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from i...', Array)
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(333): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\DatabaseMigrationRepository.php(169): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(545): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(97): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(63): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#29 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#30 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#31 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' (SQL: select * from information_schema.tables where table_schema = sisVot_bd and table_name = migrations) in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php:664
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(624): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Connection.php(333): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\DatabaseMigrationRepository.php(169): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(545): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(97): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(63): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#12 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 {main} {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' (SQL: select * from information_schema.tables where table_schema = sisVot_bd and table_name = migrations) at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php:664, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'sisvot_bd' at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connectors\\Connector.php:68)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(545): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(97): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#12 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2018-06-12 10:34:49] production.ERROR: BadMethodCallException: Method Illuminate\Database\Schema\Blueprint::interger does not exist. in C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Traits\Macroable.php:99
+Stack trace:
+#0 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_094954_create_persona_table.php(21): Illuminate\Database\Schema\Blueprint->__call('interger', Array)
+#1 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(164): CreatePersonaTable->{closure}(Object(Illuminate\Database\Schema\Blueprint))
+#2 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\helpers.php(1041): Illuminate\Database\Schema\Builder->Illuminate\Database\Schema\{closure}(Object(Illuminate\Database\Schema\Blueprint))
+#3 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Schema\Builder.php(165): tap(Object(Illuminate\Database\Schema\Blueprint), Object(Closure))
+#4 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\support\Facades\Facade.php(221): Illuminate\Database\Schema\Builder->create('persona', Object(Closure))
+#5 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\database\migrations\2018_06_12_094954_create_persona_table.php(32): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#6 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(359): CreatePersonaTable->up()
+#7 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(366): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#8 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(177): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreatePersonaTable), 'up')
+#9 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('C:\\Users\\nloyol...', 1, false)
+#10 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Migrations\Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#11 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\database\Console\Migrations\MigrateCommand.php(70): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#12 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#13 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#15 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#16 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(564): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#17 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(184): Illuminate\Container\Container->call(Array)
+#18 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Command\Command.php(251): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#19 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Command.php(171): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#20 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(886): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(262): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\symfony\console\Application.php(145): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\console\Application.php(89): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Console\Kernel.php(114): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 C:\Users\nloyola\Desktop\sisVotSoft\sisVotSoftware\artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 {main} {"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Database\\Schema\\Blueprint::interger does not exist. at C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\support\\Traits\\Macroable.php:99)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_094954_create_persona_table.php(21): Illuminate\\Database\\Schema\\Blueprint->__call('interger', Array)
+#1 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(164): CreatePersonaTable->{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
+#2 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\support\\helpers.php(1041): Illuminate\\Database\\Schema\\Builder->Illuminate\\Database\\Schema\\{closure}(Object(Illuminate\\Database\\Schema\\Blueprint))
+#3 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Schema\\Builder.php(165): tap(Object(Illuminate\\Database\\Schema\\Blueprint), Object(Closure))
+#4 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\support\\Facades\\Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('persona', Object(Closure))
+#5 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\database\\migrations\\2018_06_12_094954_create_persona_table.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#6 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(359): CreatePersonaTable->up()
+#7 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#8 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreatePersonaTable), 'up')
+#9 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\Users\\\
+loyol...', 1, false)
+#10 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Migrations\\Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#11 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\database\\Console\\Migrations\\MigrateCommand.php(70): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#12 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#13 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(29): call_user_func_array(Array, Array)
+#14 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#16 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(564): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#17 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(184): Illuminate\\Container\\Container->call(Array)
+#18 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Command\\Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Command.php(171): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(886): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(262): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Console\\Kernel.php(114): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\Users\
+loyola\\Desktop\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 {main}
+"} 
