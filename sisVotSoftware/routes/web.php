@@ -18,7 +18,6 @@ $router->get('/', function () use ($router) {
 $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
     $app->get('nacionalidad', 'NacionalidadController@listNacionalidad');
     $app->get('persona', 'PersonaController@listPersona');
-    
     $app->get('partido', 'PartidoController@listPersona');
     
     
