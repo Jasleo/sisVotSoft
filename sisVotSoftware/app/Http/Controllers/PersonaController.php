@@ -13,10 +13,21 @@ use App\TipoUsuario;
 
 class PersonaController extends Controller
 {
-   
-    public function __construct()
-    {
-       
+    
+    public function listPersona(){
+        try{
+            $result = array("code" => 200, "state" => true, "data" => array());
+            $persona = Persona::get();
+                    
+            if($persona){
+                $result = array("code" => 200, "state" => true, "data" => $persona);
+            }        
+            
+        } catch (\Exception $e){
+            $result = array("code" => 500, "state" => false, "data" =>  $e->getMessage());    
+        }
+        
+        return response()->json($result);
     }
 
 }
