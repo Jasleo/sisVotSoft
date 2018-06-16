@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
-use App\Http\Request;
+//use App\Http\Request;
 use App\Http\Controllers\Controllers;
 use App\Persona;
 use App\Pais;

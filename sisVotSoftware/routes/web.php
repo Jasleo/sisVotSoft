@@ -16,14 +16,35 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
-    $app->get('nacionalidad', 'NacionalidadController@listNacionalidad');
-    $app->get('persona', 'PersonaController@listPersona');
-    $app->get('partido', 'PartidoController@listPartido');
+    $app->get('nacionalidades', 'NacionalidadController@listNacionalidad');
+    $app->post('nacionalidad', 'NacionalidadController@createNacionalidad');
+    $app->delete('nacionalidad/{id}', 'NacionalidadController@deleteNacionalidad');
+    //$app->put('nacionalidad/in/{id}', 'NacionalidadController@updateNacionalidad');
+
+    $app->get('paises', 'PaisController@listPais');
+    $app->post('pais', 'PaisController@createPais');
+    $app->delete('pais/{id}', 'PaisController@deletePais');
+     //$app->put('pais/in/{id}', 'PaisController@updatePais');
+
+    $app->get('tipoUsuarios', 'TipoUsuarioController@listTipoUsuario');
+
+    $app->get('personas', 'PersonaController@listPersona');
+    $app->post('persona', 'PersonaController@createPersona');
+    $app->delete('persona/{id}', 'PersonaController@deletePersona');
+    //$app->put('persona/in/{id}', 'PersonaController@updatePersona');
+
+    $app->get('partidos', 'PartidoController@listPartido');
+    $app->post('partido', 'PartidoController@createPartido');
+    $app->delete('partido/{id}', 'PartidoController@deletePartido');
+    //$app->put('partido/in/{id}', 'PartidoController@updatePartido');
+
     $app->get('candidato', 'CandidatoController@listCandidato');
-    $app->get('pais', 'PaisController@listPais');
-    $app->get('tipoUsuario', 'TipoUsuarioController@listTipoUsuario');
+    $app->post('candidatos', 'CandidatoController@createCandidato');
+    $app->delete('candidato', 'CandidatoController@deleteCandidato');
+    //$app->put('candidato/in/{id}', 'CandidatoController@updateCandidato');
+
     $app->get('voto', 'VotoController@listVoto');
-    
+    $app->post('voto', 'VotoController@createVoto');
     
     
 });

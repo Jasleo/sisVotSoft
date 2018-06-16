@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
-use App\Http\Request;
+//use App\Http\Request;
 use App\Http\Controllers\Controllers;
 use App\Pais;
 
@@ -34,9 +34,6 @@ class PaisController extends Controller
 
         return response()->json($result);
     }
-
-
-
     
     public function deletePais($id) {
         try {

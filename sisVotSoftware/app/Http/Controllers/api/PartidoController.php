@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
-use App\Http\Request;
+//use App\Http\Request;
 use App\Http\Controllers\Controllers;
 use App\Partido;
 
@@ -35,8 +35,6 @@ class ExampleController extends Controller
 
         return response()->json($result);
     }
-
-
     
     public function deletePartido($id) {
         try {

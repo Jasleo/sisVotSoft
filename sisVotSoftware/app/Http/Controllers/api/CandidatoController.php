@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
-use App\Http\Request;
+//use App\Http\Request;
 use App\Http\Controllers\Controllers;
 use App\Candidato;
 use App\Persona;
@@ -49,8 +49,5 @@ class CandidatoController extends Controller {
         }
         return response()->json($result);
     }
-
-    //falta update
-
  
 }
