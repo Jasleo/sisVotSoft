@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
-//use App\Http\Request;
-use App\Http\Controllers\Controllers;
+use App\Http\Requests;
+use App\Http\Controllers\Controller; 
 use App\Nacionalidad;
 
 class NacionalidadController extends Controller {

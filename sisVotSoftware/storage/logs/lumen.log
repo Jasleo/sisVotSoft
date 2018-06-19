@@ -4460,3 +4460,123 @@ loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\
 loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #21 {main}
 "} 
+[2018-06-19 10:12:00] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:15:19] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:19:32] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:22:45] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:23:58] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:24:52] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:24:53] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:24:53] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:24:53] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
+[2018-06-19 10:25:58] production.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Class 'App\Http\Controllers\api\Controller' not found in C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\app\Http\Controllers\api\NacionalidadController.php:10
+Stack trace:
+#0 C:\Users\nloyola\Desktop\Nueva carpeta (2)\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Http\\Controllers\\api\\Controller' not found at C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\app\\Http\\Controllers\\api\\NacionalidadController.php:10)
+[stacktrace]
+#0 C:\\Users\
+loyola\\Desktop\\Nueva carpeta (2)\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 

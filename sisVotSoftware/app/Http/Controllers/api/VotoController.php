@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-//use App\Http\Request;
-use App\Http\Controllers\Controllers;
+use App\Http\Requests;
+use App\Http\Controllers\Controller; 
 use App\Voto;
 use App\Persona;
 use App\Candidato;
