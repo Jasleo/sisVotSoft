@@ -16,34 +16,34 @@ $router->get('/', function () use ($router) {
 });
 
 $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
-    $app->get('nacionalidades', 'NacionalidadController@listNacionalidad');
+    $app->get('listNacionalidad', 'NacionalidadController@listNacionalidad');
     $app->post('nacionalidad', 'NacionalidadController@createNacionalidad');
     $app->delete('nacionalidad/{id}', 'NacionalidadController@deleteNacionalidad');
     //$app->put('nacionalidad/in/{id}', 'NacionalidadController@updateNacionalidad');
 
-    $app->get('paises', 'PaisController@listPais');
+    $app->get('listPais', 'PaisController@listPais');
     $app->post('pais', 'PaisController@createPais');
     $app->delete('pais/{id}', 'PaisController@deletePais');
      //$app->put('pais/in/{id}', 'PaisController@updatePais');
 
-    $app->get('tipoUsuarios', 'TipoUsuarioController@listTipoUsuario');
+    $app->get('privilegio', 'privilegioController@listPrivilegio');
 
-    $app->get('personas', 'PersonaController@listPersona');
+    $app->get('listPersona', 'PersonaController@listPersona');
     $app->post('persona', 'PersonaController@createPersona');
     $app->delete('persona/{id}', 'PersonaController@deletePersona');
     //$app->put('persona/in/{id}', 'PersonaController@updatePersona');
 
-    $app->get('partidos', 'PartidoController@listPartido');
+    $app->get('listPartido', 'PartidoController@listPartido');
     $app->post('partido', 'PartidoController@createPartido');
     $app->delete('partido/{id}', 'PartidoController@deletePartido');
     //$app->put('partido/in/{id}', 'PartidoController@updatePartido');
 
-    $app->get('candidato', 'CandidatoController@listCandidato');
-    $app->post('candidatos', 'CandidatoController@createCandidato');
-    $app->delete('candidato', 'CandidatoController@deleteCandidato');
+    $app->get('listCandidato', 'CandidatoController@listCandidato');
+    $app->post('candidato', 'CandidatoController@createCandidato');
+    $app->delete('candidato/{id}', 'CandidatoController@deleteCandidato');
     //$app->put('candidato/in/{id}', 'CandidatoController@updateCandidato');
 
-    $app->get('voto', 'VotoController@listVoto');
+    $app->get('listVoto', 'VotoController@listVoto');
     $app->post('voto', 'VotoController@createVoto');
     
     

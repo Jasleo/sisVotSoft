@@ -4,7 +4,7 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;
 use App\Nacionalidad;
 
 class NacionalidadController extends Controller {
@@ -33,7 +33,7 @@ class NacionalidadController extends Controller {
 
         return response()->json($result);
     }
-    
+
     public function deleteNacionalidad($id) {
         try {
             $result = array("code" => 200, "state" => true, "data" => "The search did not find results");
@@ -49,6 +49,4 @@ class NacionalidadController extends Controller {
     }
 
     //falta update
-    
-
 }
