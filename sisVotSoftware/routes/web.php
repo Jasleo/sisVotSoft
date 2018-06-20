@@ -27,7 +27,10 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
      //$app->put('pais/in/{id}', 'PaisController@updatePais');
 
     $app->get('privilegio', 'PrivilegioController@listPrivilegio');
-
+    
+    $app->get('listCuenta', 'CuentaController@listPersona');
+    
+    
     $app->get('listPersona', 'PersonaController@listPersona');
     $app->post('persona', 'PersonaController@createPersona');
     $app->delete('persona/{id}', 'PersonaController@deletePersona');

@@ -12,10 +12,11 @@ class NacionalidadController extends Controller {
     public function createNacionalidad(Request $request) {
         try {
             $nacionalidad = Nacionalidad::create($request->all());
-            $result = array("code" => 200, "state" => true, "data" => "Nacionalidad Registrada");
+            $result = array("code" => 200, "state" => true, "data" => "The employee was registered successfully");
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());
         }
+
         return response()->json($result);
     }
 

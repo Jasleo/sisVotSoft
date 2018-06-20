@@ -25,11 +25,9 @@ class CuentaController extends Controller
         try{
             $result = array("code" => 200, "state" => true, "data" => array());
             $cuenta = Cuenta::get();
-                    
             if($cuenta){
                 $result = array("code" => 200, "state" => true, "data" => $cuenta);
             }        
-            
         } catch (\Exception $e){
             $result = array("code" => 500, "state" => false, "data" =>  $e->getMessage());    
         }
