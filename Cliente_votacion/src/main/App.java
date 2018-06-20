@@ -1,22 +1,26 @@
 package main;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Data;
+import model.Pais;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class App extends javax.swing.JFrame {
-    
+
     private Data data;
+
     public App() {
         initComponents();
         data = new Data();
         init();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -58,8 +62,8 @@ public class App extends javax.swing.JFrame {
         txtAddApellido = new javax.swing.JTextField();
         txtAddDireccion = new javax.swing.JTextField();
         txtAddEdad = new javax.swing.JTextField();
-        cboPaisResidencia = new javax.swing.JComboBox<>();
-        cboNacionalidad = new javax.swing.JComboBox<>();
+        cboPaisResidencia = new javax.swing.JComboBox();
+        cboNacionalidad = new javax.swing.JComboBox();
         btnAddVotante = new javax.swing.JButton();
         jfUpdateDireccion = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
@@ -808,8 +812,8 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton btnInscribirPartido;
     private javax.swing.JComboBox<String> cboActNacionalidad;
     private javax.swing.JComboBox<String> cboActPaisResidencia;
-    private javax.swing.JComboBox<String> cboNacionalidad;
-    private javax.swing.JComboBox<String> cboPaisResidencia;
+    private javax.swing.JComboBox cboNacionalidad;
+    private javax.swing.JComboBox cboPaisResidencia;
     private javax.swing.JComboBox<String> cboPartidoCand;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -895,8 +899,17 @@ public class App extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void init() {
-        this.setLocationRelativeTo(null);
+        cargarPaises();
     }
-    
-    
+
+    private void cargarPaises() {
+        List<Pais> lista = data.getListaPais();
+
+        cboPaisResidencia.removeAllItems();
+
+        for (Pais pa : lista) {
+            cboPaisResidencia.addItem(pa);
+        }
+    }
+
 }
