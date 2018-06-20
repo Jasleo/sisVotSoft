@@ -20,7 +20,7 @@ class VotoController extends Controller {
         }
         return response()->json($result);
     }
-
+    
     public function listVoto() {
         try {
             $result = array("code" => 200, "state" => true, "data" => array());

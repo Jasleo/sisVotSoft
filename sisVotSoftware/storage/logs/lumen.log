@@ -5671,3 +5671,93 @@ Stack trace:
 #14 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\public\\index.php(28): Laravel\\Lumen\\Application->run()
 #15 {main}
 "} 
+[2018-06-20 21:28:58] production.ERROR: ReflectionException: Class App\Http\Controllers\api\PartidoController does not exist in C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php:767
+Stack trace:
+#0 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(767): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(646): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#2 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(601): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#3 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Application.php(221): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#4 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(308): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#5 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(275): Laravel\Lumen\Application->callControllerAction(Array)
+#6 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(260): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(160): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(413): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(166): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(107): Laravel\Lumen\Application->dispatch(NULL)
+#11 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\public\index.php(28): Laravel\Lumen\Application->run()
+#12 {main} {"exception":"[object] (ReflectionException(code: -1): Class App\\Http\\Controllers\\api\\PartidoController does not exist at C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php:767)
+[stacktrace]
+#0 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(767): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#1 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(646): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#2 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(601): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#3 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Application.php(221): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#4 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(308): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#5 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(275): Laravel\\Lumen\\Application->callControllerAction(Array)
+#6 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(260): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(160): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#8 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(413): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#9 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(166): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(107): Laravel\\Lumen\\Application->dispatch(NULL)
+#11 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#12 {main}
+"} 
+[2018-06-20 21:35:54] production.ERROR: ReflectionException: Class App\Http\Controllers\api\VotoController does not exist in C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php:767
+Stack trace:
+#0 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(767): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(646): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#2 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(601): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#3 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Application.php(221): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#4 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(308): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#5 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(275): Laravel\Lumen\Application->callControllerAction(Array)
+#6 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(260): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(160): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(413): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(166): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(107): Laravel\Lumen\Application->dispatch(NULL)
+#11 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\public\index.php(28): Laravel\Lumen\Application->run()
+#12 {main} {"exception":"[object] (ReflectionException(code: -1): Class App\\Http\\Controllers\\api\\VotoController does not exist at C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php:767)
+[stacktrace]
+#0 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(767): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#1 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(646): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#2 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(601): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#3 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Application.php(221): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#4 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(308): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#5 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(275): Laravel\\Lumen\\Application->callControllerAction(Array)
+#6 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(260): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(160): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#8 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(413): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#9 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(166): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(107): Laravel\\Lumen\\Application->dispatch(NULL)
+#11 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#12 {main}
+"} 
+[2018-06-20 21:37:50] production.ERROR: ReflectionException: Class App\Http\Controllers\api\VotoController does not exist in C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php:767
+Stack trace:
+#0 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(767): ReflectionClass->__construct('App\\Http\\Contro...')
+#1 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(646): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#2 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\illuminate\container\Container.php(601): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#3 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Application.php(221): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#4 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(308): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#5 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(275): Laravel\Lumen\Application->callControllerAction(Array)
+#6 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(260): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(160): Laravel\Lumen\Application->handleFoundRoute(Array)
+#8 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(413): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#9 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(166): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\vendor\laravel\lumen-framework\src\Concerns\RoutesRequests.php(107): Laravel\Lumen\Application->dispatch(NULL)
+#11 C:\Users\Alumno\Desktop\sisVotSoft\sisVotSoftware\public\index.php(28): Laravel\Lumen\Application->run()
+#12 {main} {"exception":"[object] (ReflectionException(code: -1): Class App\\Http\\Controllers\\api\\VotoController does not exist at C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php:767)
+[stacktrace]
+#0 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(767): ReflectionClass->__construct('App\\\\Http\\\\Contro...')
+#1 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(646): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#2 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\illuminate\\container\\Container.php(601): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#3 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Application.php(221): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#4 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(308): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#5 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(275): Laravel\\Lumen\\Application->callControllerAction(Array)
+#6 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(260): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#7 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(160): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#8 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(413): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#9 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(166): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#10 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\vendor\\laravel\\lumen-framework\\src\\Concerns\\RoutesRequests.php(107): Laravel\\Lumen\\Application->dispatch(NULL)
+#11 C:\\Users\\Alumno\\Desktop\\sisVotSoft\\sisVotSoftware\\public\\index.php(28): Laravel\\Lumen\\Application->run()
+#12 {main}
+"} 
