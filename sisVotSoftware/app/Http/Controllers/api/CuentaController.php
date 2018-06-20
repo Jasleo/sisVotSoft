@@ -11,7 +11,7 @@ use App\Cuenta;
 class CuentaController extends Controller
 {
     
-    public function createPersona(Request $request) {
+    public function createCuenta(Request $request) {
         try {
             $cuenta = Cuenta::create($request->all());
             $result = array("code" => 200, "state" => true, "data" => "Cuenta Registrada");
@@ -21,7 +21,7 @@ class CuentaController extends Controller
         return response()->json($result);
     }
 
-    public function listPersona(){
+    public function listCuenta(){
         try{
             $result = array("code" => 200, "state" => true, "data" => array());
             $cuenta = Cuenta::get();
@@ -35,7 +35,7 @@ class CuentaController extends Controller
         return response()->json($result);
     }
     
-    public function deletePersona($id) {
+    public function deleteCuenta($id) {
         try {
             $result = array("code" => 200, "state" => true, "data" => "The search did not find results");
             $cuenta = Cuenta::find($id);

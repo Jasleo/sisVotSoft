@@ -1,15 +1,15 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+  |--------------------------------------------------------------------------
+  | Application Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register all of the routes for an application.
+  | It is a breeze. Simply tell Lumen the URIs it should respond to
+  | and give it the Closure to call when that URI is requested.
+  |
+ */
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
@@ -24,13 +24,14 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
     $app->get('listPais', 'PaisController@listPais');
     $app->post('pais', 'PaisController@createPais');
     $app->delete('pais/{id}', 'PaisController@deletePais');
-     //$app->put('pais/in/{id}', 'PaisController@updatePais');
+    //$app->put('pais/in/{id}', 'PaisController@updatePais');
 
     $app->get('privilegio', 'PrivilegioController@listPrivilegio');
-    
-    $app->get('listCuenta', 'CuentaController@listPersona');
-    
-    
+
+    $app->get('listCuenta', 'CuentaController@listCuenta');
+    $app->post('cuenta', 'CuentaController@createCuenta');
+    $app->delete('cuenta/{id}', 'CuentaController@deleteCuenta');
+
     $app->get('listPersona', 'PersonaController@listPersona');
     $app->post('persona', 'PersonaController@createPersona');
     $app->delete('persona/{id}', 'PersonaController@deletePersona');
@@ -48,8 +49,6 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
 
     $app->get('listVoto', 'VotoController@listVoto');
     $app->post('voto', 'VotoController@createVoto');
-    
-    
 });
 
 //admin

@@ -13,7 +13,7 @@ class PaisController extends Controller
     public function createPais(Request $request) {
         try {
             $pais = Pais::create($request->all());
-            $result = array("code" => 200, "state" => true, "data" => "Pais Registrada");
+            $result = array("code" => 200, "state" => true, "data" => "Pais Registrado");
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());
         }
