@@ -17,7 +17,7 @@ class CreateVotoTable extends Migration
             $table->increments('id');
             $table->dateTime('fecha_voto');
             $table->string('votante_fk')->foreign('rut')->on('persona');
-            $table->integer('candidato_fk')->unsigned()->foreign('id')->on('partido');            
+            $table->integer('candidato_fk')->foreign('id')->on('candidato');            
         });
     }
 
