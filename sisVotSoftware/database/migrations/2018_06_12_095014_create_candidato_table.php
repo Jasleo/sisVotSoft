@@ -16,7 +16,8 @@ class CreateCandidatoTable extends Migration
         Schema::create('candidato', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('partido_fk')->unsigned()->foreign('id')->on('partido');           
-            $table->string('persona_fk')->foreign('rut')->on('persona');        
+            $table->string('persona_fk')->foreign('rut')->on('persona');    
+            $table->timestamps();
         });
     }
 

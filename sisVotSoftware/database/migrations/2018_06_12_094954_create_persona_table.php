@@ -24,7 +24,8 @@ class CreatePersonaTable extends Migration
                   ->on('pais');
             $table->integer('nacionalidad_fk')->unsigned()
                   ->foreign('id')
-                  ->on('nacionalidad');                                 
+                  ->on('nacionalidad'); 
+            $table->timestamps();
         });
     }
 

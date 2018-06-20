@@ -23,6 +23,7 @@ class CreateCuentaTable extends Migration
             $table->integer('rutPersona_fk')->unsigned()
                   ->foreign('rut')
                   ->on('persona'); 
+            $table->timestamps();
         });
     }
 

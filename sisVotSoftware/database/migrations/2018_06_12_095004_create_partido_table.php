@@ -17,6 +17,7 @@ class CreatePartidoTable extends Migration
             $table->increments('id');
             $table->string('descripcion');
             $table->integer('anio_fundacion');
+            $table->timestamps();
         });
     }
 

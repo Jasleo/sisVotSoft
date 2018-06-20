@@ -16,6 +16,7 @@ class CreatePrivilegioTable extends Migration
         Schema::create('privilegio', function (Blueprint $table) {
             $table->increments('id');
             $table->string('descripcion');
+            $table->timestamps();
         });
     }
 
