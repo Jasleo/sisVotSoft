@@ -41,4 +41,10 @@ public class Data {
         
         return null;
     }
+    
+    public boolean validacionUsuario(String rut,String pass){
+        
+        
+        return true;
+    }
 }

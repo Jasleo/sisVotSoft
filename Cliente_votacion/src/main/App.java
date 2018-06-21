@@ -1,22 +1,35 @@
 package main;
 
+import java.awt.Image;
 import java.io.IOException;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import model.Data;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class App extends javax.swing.JFrame {
-    
+
     private Data data;
+
     public App() {
         initComponents();
         data = new Data();
+
+        
+        ImageIcon icon = new ImageIcon("src/images/servel.jpg");
+        Icon icono=new ImageIcon(icon.getImage().getScaledInstance(pnlLogoServel.getWidth(), pnlLogoServel.getHeight(),Image.SCALE_DEFAULT));
+
+        
+        pnlLogoServel.setIcon(icono);
+
         init();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -111,7 +124,7 @@ public class App extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         txtRunIniciar = new javax.swing.JTextField();
         txtPassInicio = new javax.swing.JPasswordField();
-        pnlLogoServel = new javax.swing.JPanel();
+        pnlLogoServel = new javax.swing.JLabel();
 
         pnlAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder("Administrador"));
 
@@ -698,23 +711,15 @@ public class App extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnIniciarSesion.setText("Iniciar Sesion");
+        btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarSesionActionPerformed(evt);
+            }
+        });
 
         lbl1.setText("R.U.N : ");
 
         jLabel1.setText("Contraseña :");
-
-        pnlLogoServel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout pnlLogoServelLayout = new javax.swing.GroupLayout(pnlLogoServel);
-        pnlLogoServel.setLayout(pnlLogoServelLayout);
-        pnlLogoServelLayout.setHorizontalGroup(
-            pnlLogoServelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 137, Short.MAX_VALUE)
-        );
-        pnlLogoServelLayout.setVerticalGroup(
-            pnlLogoServelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 145, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -732,20 +737,23 @@ public class App extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lbl1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                                .addComponent(txtRunIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(txtRunIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnIniciarSesion)
-                        .addGap(80, 80, 80)))
-                .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addGap(3, 3, 3)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl1)
@@ -754,16 +762,21 @@ public class App extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(txtPassInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnIniciarSesion))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(38, Short.MAX_VALUE))
+                        .addGap(41, 41, 41)
+                        .addComponent(btnIniciarSesion)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
+        String rut, clave;
+        rut = txtRunIniciar.getText();
+        clave = txtPassInicio.getText();
+
+
+    }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -868,7 +881,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JMenuItem miResultVo;
     private javax.swing.JMenuItem miVotarVo;
     private javax.swing.JPanel pnlAdmin;
-    private javax.swing.JPanel pnlLogoServel;
+    private javax.swing.JLabel pnlLogoServel;
     private javax.swing.JPanel pnlVotante;
     private javax.swing.JTable tblBuscarPersonaCandidato;
     private javax.swing.JTable tblBuscarPersonaCandidatoUp;
@@ -897,6 +910,5 @@ public class App extends javax.swing.JFrame {
     private void init() {
         this.setLocationRelativeTo(null);
     }
-    
-    
+
 }
