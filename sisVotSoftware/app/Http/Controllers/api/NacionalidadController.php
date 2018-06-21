@@ -4,7 +4,7 @@ namespace App\Http\Controllers\api;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Http\Controllers\Controller; 
+use App\Http\Controllers\Controller;
 use App\Nacionalidad;
 
 class NacionalidadController extends Controller {
@@ -12,10 +12,11 @@ class NacionalidadController extends Controller {
     public function createNacionalidad(Request $request) {
         try {
             $nacionalidad = Nacionalidad::create($request->all());
-            $result = array("code" => 200, "state" => true, "data" => "Nacionalidad Registrada");
+            $result = array("code" => 200, "state" => true, "data" => "The employee was registered successfully");
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());
         }
+
         return response()->json($result);
     }
 
@@ -33,7 +34,7 @@ class NacionalidadController extends Controller {
 
         return response()->json($result);
     }
-    
+
     public function deleteNacionalidad($id) {
         try {
             $result = array("code" => 200, "state" => true, "data" => "The search did not find results");
@@ -49,6 +50,4 @@ class NacionalidadController extends Controller {
     }
 
     //falta update
-    
-
 }

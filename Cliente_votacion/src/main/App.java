@@ -2,12 +2,18 @@ package main;
 
 import java.awt.Image;
 import java.io.IOException;
+<<<<<<< HEAD
 import java.net.URL;
+=======
+import java.sql.SQLException;
+import java.util.List;
+>>>>>>> 6b3c8ebdf89ad1c5c1ab3842aaa1d26f97ef602a
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import model.Data;
+import model.Pais;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -71,8 +77,8 @@ public class App extends javax.swing.JFrame {
         txtAddApellido = new javax.swing.JTextField();
         txtAddDireccion = new javax.swing.JTextField();
         txtAddEdad = new javax.swing.JTextField();
-        cboPaisResidencia = new javax.swing.JComboBox<>();
-        cboNacionalidad = new javax.swing.JComboBox<>();
+        cboPaisResidencia = new javax.swing.JComboBox();
+        cboNacionalidad = new javax.swing.JComboBox();
         btnAddVotante = new javax.swing.JButton();
         jfUpdateDireccion = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
@@ -821,8 +827,8 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton btnInscribirPartido;
     private javax.swing.JComboBox<String> cboActNacionalidad;
     private javax.swing.JComboBox<String> cboActPaisResidencia;
-    private javax.swing.JComboBox<String> cboNacionalidad;
-    private javax.swing.JComboBox<String> cboPaisResidencia;
+    private javax.swing.JComboBox cboNacionalidad;
+    private javax.swing.JComboBox cboPaisResidencia;
     private javax.swing.JComboBox<String> cboPartidoCand;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -908,7 +914,20 @@ public class App extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void init() {
-        this.setLocationRelativeTo(null);
+        cargarPaises();
     }
 
+<<<<<<< HEAD
+=======
+    private void cargarPaises() {
+        List<Pais> lista = data.getListaPais();
+
+        cboPaisResidencia.removeAllItems();
+
+        for (Pais pa : lista) {
+            cboPaisResidencia.addItem(pa);
+        }
+    }
+
+>>>>>>> 6b3c8ebdf89ad1c5c1ab3842aaa1d26f97ef602a
 }

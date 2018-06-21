@@ -25,7 +25,7 @@ public class Pais {
 
     @Override
     public String toString() {
-        return "Pais{" + "id=" + id + ", Descripcion=" + Descripcion + '}';
+        return Descripcion;
     }
     
     
