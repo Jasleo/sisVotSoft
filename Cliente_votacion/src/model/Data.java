@@ -2,16 +2,26 @@ package model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class Data {
+
+    private final ObjectMapper mapper;
+
+    public Data() {
+        mapper = new ObjectMapper();
+    }
 
     //obtener nacionalidades
     public List<Nacionalidad> getListaNacionalidad() {
@@ -19,7 +29,7 @@ public class Data {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("http://localhost:8000/api/nacionalidad")
+                .url("http://localhost:8000/api/listNacionalidad")
                 .get()
                 .addHeader("authorization", "Basic YXBwOjEyMw==")
                 .addHeader("cache-control", "no-cache")
@@ -29,8 +39,6 @@ public class Data {
         try {
             Response response = client.newCall(request).execute();
             String respuesta = response.body().string();
-
-            ObjectMapper mapper = new ObjectMapper();
 
             Nacionalidad[] n;
             n = mapper.readValue(respuesta, Nacionalidad[].class);
@@ -50,7 +58,7 @@ public class Data {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("http://localhost:8000/api/v1/paises")
+                .url("http://localhost:8000/api/v1/listPais")
                 .get()
                 .addHeader("cache-control", "no-cache")
                 .addHeader("postman-token", "b3ae84f7-519a-1371-fa59-822cfc916e98")
@@ -59,9 +67,7 @@ public class Data {
         try {
             Response response = client.newCall(request).execute();
             String respuesta = response.body().string();
-
-            ObjectMapper mapper = new ObjectMapper();
-
+            
             Pais[] pa;
             pa = mapper.readValue(respuesta, Pais[].class);
 
@@ -73,10 +79,57 @@ public class Data {
 
         return null;
     }
-    
-    public boolean validacionUsuario(String rut,String pass){
-        
-        
-        return true;
+
+    public List<Cuenta> getListaCuentas() {
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listCuenta")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "6737a7f9-c304-44d2-b784-b7e21df6fbf5")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+            
+            Cuenta[] cu;
+            cu = mapper.readValue(respuesta, Cuenta[].class);
+
+            return Arrays.asList(cu);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    //guardar en la api
+    public void setPartido(Partido partido) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, partido);
+            String json = writer.toString();
+
+            OkHttpClient client = new OkHttpClient();
+
+            // mandamos los datos a la api
+            MediaType mediaType = MediaType.parse("application/octet-stream");
+            RequestBody body = RequestBody.create(mediaType, json);
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/partido")
+                    .post(body)
+                    .addHeader("Cache-Control", "no-cache")
+                    .addHeader("Postman-Token", "2e5a4b0c-394f-4af3-9ba5-c6f2abbb8b5f")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

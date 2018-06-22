@@ -37,7 +37,6 @@ CREATE TABLE persona(
     FOREIGN KEY(nacionalidad_fk)        REFERENCES nacionalidad(id)
 );
 
-
 CREATE TABLE cuenta(
     id INT AUTO_INCREMENT,
     rutPersona_fk VARCHAR(13) UNIQUE,
@@ -47,6 +46,7 @@ CREATE TABLE cuenta(
     FOREIGN KEY (privilegio_fk) REFERENCES privilegio(id),
     FOREIGN KEY (rutPersona_fk) REFERENCES persona(rut)
 );
+
 
 CREATE TABLE partido(
     id INT auto_increment,
@@ -294,6 +294,16 @@ CALL insert_pais_nacinalidad('Yibuti'                             ,'Yibutiana');
 CALL insert_pais_nacinalidad('Zambia'                             ,'Zambiana');
 CALL insert_pais_nacinalidad('Zimbabue'                           ,'Zimbabuense');
 
+
+
+INSERT INTO privilegio VALUES(null,'Administrador');
+INSERT INTO privilegio VALUES(null,'Normal');
+
+INSERT INTO persona VALUES('19851468-3','Diego','Henríquez Miranda','Av España #90',20,39,39);
+INSERT INTO persona VALUES('19851578-4','Nilsson','Loyola Ilabaca','Av Puente #69',20,39,39);
+
+INSERT INTO cuenta VALUES(null,'19851578-4','admin',1);
+INSERT INTO cuenta VALUES(null,'19851468-3','diego123',2);
 
 SELECT * FROM pais;
 SELECT * FROM nacionalidad;

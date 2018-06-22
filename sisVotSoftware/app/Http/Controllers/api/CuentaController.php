@@ -26,7 +26,7 @@ class CuentaController extends Controller
             $result = array("code" => 200, "state" => true, "data" => array());
             $cuenta = Cuenta::get();
             if($cuenta){
-                $result = array("code" => 200, "state" => true, "data" => $cuenta);
+                $result = $cuenta;
             }        
         } catch (\Exception $e){
             $result = array("code" => 500, "state" => false, "data" =>  $e->getMessage());    

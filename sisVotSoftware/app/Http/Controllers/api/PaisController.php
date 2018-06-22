@@ -26,7 +26,7 @@ class PaisController extends Controller
             $pais = Pais::get();
 
             if ($pais) {
-                $result = array("code" => 200, "state" => true, "data" => $pais);
+                $result = $pais;
             }
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());

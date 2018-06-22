@@ -26,7 +26,7 @@ class NacionalidadController extends Controller {
             $nacionalidad = Nacionalidad::get();
 
             if ($nacionalidad) {
-                $result = array("code" => 200, "state" => true, "data" => $nacionalidad);
+                $result = $nacionalidad;
             }
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());

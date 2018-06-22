@@ -2,16 +2,13 @@ package main;
 
 import java.awt.Image;
 import java.io.IOException;
-<<<<<<< HEAD
-import java.net.URL;
-=======
-import java.sql.SQLException;
 import java.util.List;
->>>>>>> 6b3c8ebdf89ad1c5c1ab3842aaa1d26f97ef602a
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import model.Cuenta;
 import model.Data;
 import model.Pais;
 import okhttp3.OkHttpClient;
@@ -21,16 +18,15 @@ import okhttp3.Response;
 public class App extends javax.swing.JFrame {
 
     private Data data;
+    private List<Cuenta> listCuenta;
 
     public App() {
         initComponents();
         data = new Data();
 
-        
         ImageIcon icon = new ImageIcon("src/images/servel.jpg");
-        Icon icono=new ImageIcon(icon.getImage().getScaledInstance(pnlLogoServel.getWidth(), pnlLogoServel.getHeight(),Image.SCALE_DEFAULT));
+        Icon icono = new ImageIcon(icon.getImage().getScaledInstance(pnlLogoServel.getWidth(), pnlLogoServel.getHeight(), Image.SCALE_DEFAULT));
 
-        
         pnlLogoServel.setIcon(icono);
 
         init();
@@ -780,6 +776,41 @@ public class App extends javax.swing.JFrame {
         String rut, clave;
         rut = txtRunIniciar.getText();
         clave = txtPassInicio.getText();
+        int privilegio = 0;
+
+        listCuenta = data.getListaCuentas();
+
+        for (Cuenta c : listCuenta) {
+            if (c.getRutPersona_fk().equalsIgnoreCase(rut) && c.getPass().equalsIgnoreCase(clave)) {
+                privilegio = c.getPrivilegio_fk();
+            }
+        }
+
+        if (privilegio == 1) {
+            txtRunIniciar.setText("");
+            txtPassInicio.setText("");
+            
+            this.setVisible(false);
+            jfMenuAdmin.setVisible(true);
+            jfMenuAdmin.setLocationRelativeTo(null);     
+            
+            JOptionPane.showMessageDialog(this, "Bienvenido Administrador");
+
+        } else if (privilegio == 2) {
+            txtRunIniciar.setText("");
+            txtPassInicio.setText("");
+            
+            this.setVisible(false);
+            jfMenuUserComun.setVisible(true);
+            jfMenuUserComun.setLocationRelativeTo(null);      
+            
+            JOptionPane.showMessageDialog(this, "Bienvenido Votante");
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Error Al Iniciar Sesión");
+            txtRunIniciar.setText("");
+            txtPassInicio.setText("");
+        }
 
 
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
@@ -917,8 +948,6 @@ public class App extends javax.swing.JFrame {
         cargarPaises();
     }
 
-<<<<<<< HEAD
-=======
     private void cargarPaises() {
         List<Pais> lista = data.getListaPais();
 
@@ -928,6 +957,4 @@ public class App extends javax.swing.JFrame {
             cboPaisResidencia.addItem(pa);
         }
     }
-
->>>>>>> 6b3c8ebdf89ad1c5c1ab3842aaa1d26f97ef602a
 }
