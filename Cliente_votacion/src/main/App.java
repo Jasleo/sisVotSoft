@@ -10,7 +10,12 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import model.Cuenta;
 import model.Data;
+import model.GenerarPass;
+import model.Nacionalidad;
 import model.Pais;
+import model.Persona;
+import model.PersonaSelect;
+import model.Voto;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -18,7 +23,10 @@ import okhttp3.Response;
 public class App extends javax.swing.JFrame {
 
     private Data data;
+    private GenerarPass genPass;
     private List<Cuenta> listCuenta;
+    private int privilegio = 0; //para ver el privilegio de la persona logeada
+    private boolean sufrago = false; // para conocer si la persona voto
 
     public App() {
         initComponents();
@@ -46,7 +54,6 @@ public class App extends javax.swing.JFrame {
         miAddCandidatura = new javax.swing.JMenuItem();
         meVotacion = new javax.swing.JMenu();
         miAddPartido = new javax.swing.JMenuItem();
-        miAbrirVotacion = new javax.swing.JMenuItem();
         miEmitirVoto = new javax.swing.JMenuItem();
         miResult = new javax.swing.JMenuItem();
         meSalir = new javax.swing.JMenu();
@@ -75,6 +82,10 @@ public class App extends javax.swing.JFrame {
         txtAddEdad = new javax.swing.JTextField();
         cboPaisResidencia = new javax.swing.JComboBox();
         cboNacionalidad = new javax.swing.JComboBox();
+        btnContinuarAdd = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        lblPassGenerada = new javax.swing.JLabel();
         btnAddVotante = new javax.swing.JButton();
         jfUpdateDireccion = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
@@ -134,7 +145,7 @@ public class App extends javax.swing.JFrame {
         pnlAdmin.setLayout(pnlAdminLayout);
         pnlAdminLayout.setHorizontalGroup(
             pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 631, Short.MAX_VALUE)
+            .addGap(0, 634, Short.MAX_VALUE)
         );
         pnlAdminLayout.setVerticalGroup(
             pnlAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,6 +155,11 @@ public class App extends javax.swing.JFrame {
         mePersona.setText("Persona");
 
         miAddVotante.setText("Inscribir Votante");
+        miAddVotante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miAddVotanteActionPerformed(evt);
+            }
+        });
         mePersona.add(miAddVotante);
 
         miChangeAdress.setText("Cambiar Dirección");
@@ -163,9 +179,6 @@ public class App extends javax.swing.JFrame {
         miAddPartido.setText("Inscribir Partido");
         meVotacion.add(miAddPartido);
 
-        miAbrirVotacion.setText("Abrir Votación");
-        meVotacion.add(miAbrirVotacion);
-
         miEmitirVoto.setText("Votar");
         meVotacion.add(miEmitirVoto);
 
@@ -177,6 +190,11 @@ public class App extends javax.swing.JFrame {
         meSalir.setText("Salir");
 
         miCerrarSesion.setText("Cerrar Sesion");
+        miCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCerrarSesionActionPerformed(evt);
+            }
+        });
         meSalir.add(miCerrarSesion);
 
         menAdmin.add(meSalir);
@@ -195,7 +213,7 @@ public class App extends javax.swing.JFrame {
         jfMenuAdminLayout.setVerticalGroup(
             jfMenuAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jfMenuAdminLayout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(pnlAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -206,7 +224,7 @@ public class App extends javax.swing.JFrame {
         pnlVotante.setLayout(pnlVotanteLayout);
         pnlVotanteLayout.setHorizontalGroup(
             pnlVotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
+            .addGap(0, 634, Short.MAX_VALUE)
         );
         pnlVotanteLayout.setVerticalGroup(
             pnlVotanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,6 +244,11 @@ public class App extends javax.swing.JFrame {
         meSalirVo.setText("Salir");
 
         miCerrarSesionVo.setText("Cerrar Sesion");
+        miCerrarSesionVo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCerrarSesionVoActionPerformed(evt);
+            }
+        });
         meSalirVo.add(miCerrarSesionVo);
 
         jMenuBar1.add(meSalirVo);
@@ -238,13 +261,13 @@ public class App extends javax.swing.JFrame {
             jfMenuUserComunLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jfMenuUserComunLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlVotante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlVotante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jfMenuUserComunLayout.setVerticalGroup(
             jfMenuUserComunLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jfMenuUserComunLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(pnlVotante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -265,7 +288,12 @@ public class App extends javax.swing.JFrame {
 
         jLabel8.setText("Nacionalidad :");
 
-        btnAddVotante.setText("Registrar Votante");
+        btnContinuarAdd.setText("Continuar");
+        btnContinuarAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnContinuarAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -273,38 +301,39 @@ public class App extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAddRun, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAddNombre))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAddApellido))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAddDireccion))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtAddEdad))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtAddDireccion))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtAddNombre))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtAddRun, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtAddApellido, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                            .addComponent(txtAddEdad)))
+                    .addComponent(jLabel8)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cboPaisResidencia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cboNacionalidad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(53, 53, 53)
-                .addComponent(btnAddVotante)
-                .addContainerGap(243, Short.MAX_VALUE))
+                            .addComponent(btnContinuarAdd)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(cboPaisResidencia, 0, 121, Short.MAX_VALUE)
+                                .addComponent(cboNacionalidad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,33 +345,70 @@ public class App extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtAddNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAddNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
                     .addComponent(txtAddApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(txtAddDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(txtAddEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnAddVotante)
-                        .addGap(37, 37, 37)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtAddDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtAddEdad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(cboPaisResidencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(cboNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(btnContinuarAdd)
+                .addGap(22, 22, 22))
+        );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Cuenta"));
+
+        jLabel23.setText("Contraseña Para Inciar Sesion");
+
+        lblPassGenerada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        btnAddVotante.setText("Registrar Votante");
+        btnAddVotante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddVotanteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(lblPassGenerada, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 29, Short.MAX_VALUE)
+                        .addComponent(jLabel23)
+                        .addGap(29, 29, 29))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAddVotante)
+                .addGap(42, 42, 42))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel23)
+                .addGap(45, 45, 45)
+                .addComponent(lblPassGenerada, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addComponent(btnAddVotante)
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout jfIncribirPersonaLayout = new javax.swing.GroupLayout(jfIncribirPersona.getContentPane());
@@ -351,14 +417,20 @@ public class App extends javax.swing.JFrame {
             jfIncribirPersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jfIncribirPersonaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         jfIncribirPersonaLayout.setVerticalGroup(
             jfIncribirPersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jfIncribirPersonaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jfIncribirPersonaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jfIncribirPersonaLayout.createSequentialGroup()
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -739,12 +811,12 @@ public class App extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lbl1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                                .addComponent(txtRunIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtRunIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnIniciarSesion)
-                        .addGap(3, 3, 3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(78, 78, 78)))
                 .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -776,7 +848,6 @@ public class App extends javax.swing.JFrame {
         String rut, clave;
         rut = txtRunIniciar.getText();
         clave = txtPassInicio.getText();
-        int privilegio = 0;
 
         listCuenta = data.getListaCuentas();
 
@@ -789,31 +860,115 @@ public class App extends javax.swing.JFrame {
         if (privilegio == 1) {
             txtRunIniciar.setText("");
             txtPassInicio.setText("");
-            
+
             this.setVisible(false);
             jfMenuAdmin.setVisible(true);
-            jfMenuAdmin.setLocationRelativeTo(null);     
-            
+            jfMenuAdmin.setLocationRelativeTo(null);
+
             JOptionPane.showMessageDialog(this, "Bienvenido Administrador");
 
         } else if (privilegio == 2) {
             txtRunIniciar.setText("");
             txtPassInicio.setText("");
-            
+
             this.setVisible(false);
             jfMenuUserComun.setVisible(true);
-            jfMenuUserComun.setLocationRelativeTo(null);      
-            
+            jfMenuUserComun.setLocationRelativeTo(null);
+
             JOptionPane.showMessageDialog(this, "Bienvenido Votante");
-            
+
         } else {
             JOptionPane.showMessageDialog(this, "Error Al Iniciar Sesión");
             txtRunIniciar.setText("");
             txtPassInicio.setText("");
         }
 
+        /* para ver si ya voto el usuario logeado */
+        sufrago = EstadoVoto(rut);
+
+        if (privilegio == 1 && sufrago) {
+            miEmitirVoto.setEnabled(false);
+        }
+
+        if (privilegio == 2 && sufrago) {
+            miVotarVo.setEnabled(false);
+        }
+
 
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
+
+    private void miCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCerrarSesionActionPerformed
+        jfMenuAdmin.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_miCerrarSesionActionPerformed
+
+    private void miCerrarSesionVoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCerrarSesionVoActionPerformed
+        jfMenuUserComun.setVisible(false);
+        this.setVisible(true);
+    }//GEN-LAST:event_miCerrarSesionVoActionPerformed
+
+    private void miAddVotanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAddVotanteActionPerformed
+        jfIncribirPersona.setVisible(true);
+        jfIncribirPersona.setLocationRelativeTo(null);
+    }//GEN-LAST:event_miAddVotanteActionPerformed
+
+    private void btnContinuarAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContinuarAddActionPerformed
+        // generamos una contraseña para la cuenta de la persona recien registrada
+        String passGenerada = genPass.generarPass(genPass.MINUSCULAS + genPass.MAYUSCULAS + genPass.ESPECIALES, 12);
+
+        Pais pa;
+        Nacionalidad na;
+
+        pa = (Pais) cboPaisResidencia.getSelectedItem();
+        na = (Nacionalidad) cboNacionalidad.getSelectedItem();
+
+        String rut = txtAddRun.getText();
+        String nombre = txtAddNombre.getText();
+        String apellido = txtAddApellido.getText();
+        String direccion = txtAddDireccion.getText();
+        int edad = Integer.parseInt(txtAddEdad.getText());
+        int paisID = pa.getId();
+        int nacionalidadID = na.getId();
+
+        if (verificarRut(rut) == false) {
+            JOptionPane.showMessageDialog(this, "El RUT (" + rut + ") Ya Existe");
+
+            txtAddRun.setText("");
+            txtAddNombre.setText("");
+            txtAddApellido.setText("");
+            txtAddDireccion.setText("");
+            txtAddEdad.setText("");
+            cboNacionalidad.setSelectedIndex(1);
+            cboPaisResidencia.setSelectedIndex(1);
+        } else {
+            Persona persona = new Persona(rut, nombre, apellido, direccion, edad, paisID, nacionalidadID);
+//        data.registrarPersona(persona);
+
+            lblPassGenerada.setText(passGenerada);
+            btnAddVotante.setEnabled(true);
+            
+            txtAddRun.setEditable(false);
+            txtAddNombre.setEditable(false);
+            txtAddApellido.setEditable(false);
+            txtAddDireccion.setEditable(false);
+            txtAddEdad.setEditable(false);
+            cboNacionalidad.setEnabled(false);
+            cboPaisResidencia.setEnabled(false);
+            
+            btnContinuarAdd.setEnabled(false);
+        }
+
+
+    }//GEN-LAST:event_btnContinuarAddActionPerformed
+
+    private void btnAddVotanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddVotanteActionPerformed
+        String rutCuenta = txtAddRun.getText();
+        String passNueva = lblPassGenerada.getText();
+        
+        Cuenta cuenta = new Cuenta(rutCuenta, passNueva, 2);
+        
+//        data.crearCuenta(cuenta);
+    }//GEN-LAST:event_btnAddVotanteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -854,6 +1009,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JButton btnAddCandidatura;
     private javax.swing.JButton btnAddVotante;
     private javax.swing.JButton btnAddVotante1;
+    private javax.swing.JButton btnContinuarAdd;
     private javax.swing.JButton btnIniciarSesion;
     private javax.swing.JButton btnInscribirPartido;
     private javax.swing.JComboBox<String> cboActNacionalidad;
@@ -876,6 +1032,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -889,6 +1046,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -899,6 +1057,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JFrame jfMenuUserComun;
     private javax.swing.JFrame jfUpdateDireccion;
     private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lblPassGenerada;
     private javax.swing.JMenu meCandidato;
     private javax.swing.JMenu mePersona;
     private javax.swing.JMenu meSalir;
@@ -906,7 +1065,6 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JMenu meVotacion;
     private javax.swing.JMenu meVotacionVo;
     private javax.swing.JMenuBar menAdmin;
-    private javax.swing.JMenuItem miAbrirVotacion;
     private javax.swing.JMenuItem miAddCandidatura;
     private javax.swing.JMenuItem miAddPartido;
     private javax.swing.JMenuItem miAddVotante;
@@ -945,16 +1103,54 @@ public class App extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void init() {
-        cargarPaises();
+        cargarCbo();
+        btnAddVotante.setEnabled(false);
+
+        this.setLocationRelativeTo(null);
+
+        // bounds a los formularios
+        jfMenuAdmin.setBounds(0, 0, 666, 370);
+        jfMenuUserComun.setBounds(0, 0, 666, 370);
+
+        jfIncribirPersona.setBounds(0, 0, 720, 420);
     }
 
-    private void cargarPaises() {
-        List<Pais> lista = data.getListaPais();
+    // llenar el combobox de paises
+    private void cargarCbo() {
+        List<Pais> listaPa = data.getListaPais();
+        List<Nacionalidad> listaNa = data.getListaNacionalidad();
 
         cboPaisResidencia.removeAllItems();
+        cboActNacionalidad.removeAllItems();
 
-        for (Pais pa : lista) {
+        for (Pais pa : listaPa) {
             cboPaisResidencia.addItem(pa);
         }
+        for (Nacionalidad na : listaNa) {
+            cboNacionalidad.addItem(na);
+        }
+    }
+
+    //metodo para ver si el usuario ya sufrago
+    private boolean EstadoVoto(String rut) {
+        List<Voto> listVoto = data.getListaVotos();
+
+        for (Voto vo : listVoto) {
+            if (vo.getVotante_fk().equalsIgnoreCase(rut)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean verificarRut(String rut) {
+        List<PersonaSelect> listPersona = data.getListaPersonas();
+
+        for (PersonaSelect pe : listPersona) {
+            if (pe.getRut().equalsIgnoreCase(rut)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

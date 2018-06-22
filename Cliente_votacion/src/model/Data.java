@@ -29,7 +29,7 @@ public class Data {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("http://localhost:8000/api/listNacionalidad")
+                .url("http://localhost:8000/api/v1/listNacionalidad")
                 .get()
                 .addHeader("authorization", "Basic YXBwOjEyMw==")
                 .addHeader("cache-control", "no-cache")
@@ -67,7 +67,7 @@ public class Data {
         try {
             Response response = client.newCall(request).execute();
             String respuesta = response.body().string();
-            
+
             Pais[] pa;
             pa = mapper.readValue(respuesta, Pais[].class);
 
@@ -94,7 +94,7 @@ public class Data {
         try {
             Response response = client.newCall(request).execute();
             String respuesta = response.body().string();
-            
+
             Cuenta[] cu;
             cu = mapper.readValue(respuesta, Cuenta[].class);
 
@@ -107,8 +107,86 @@ public class Data {
         return null;
     }
 
+    public List<PersonaSelect> getListaPersonas() {
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listPersona")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "4bb4f7c2-2e16-d287-5571-bb3c9d48cb07")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            PersonaSelect[] pe;
+            pe = mapper.readValue(respuesta, PersonaSelect[].class);
+
+            return Arrays.asList(pe);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public List<Voto> getListaVotos() {
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listVoto")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "83a85cd5-9a98-fd0d-52ab-f5f0cb12fff5")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            Voto[] vo;
+            vo = mapper.readValue(respuesta, Voto[].class);
+
+            return Arrays.asList(vo);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
     //guardar en la api
-    public void setPartido(Partido partido) {
+    public void registrarPersona(Persona persona) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, persona);
+            String json = writer.toString();
+
+            // mandamos los datos a la api
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/octet-stream");
+            RequestBody body = RequestBody.create(mediaType, json);
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/persona")
+                    .post(body)
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "16270694-a679-6a47-f402-9150cadc65bc")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void registrarPartido(Partido partido) {
         try {
             //aca transformamos los datos que recibimos en un json
             StringWriter writer = new StringWriter();
@@ -132,4 +210,5 @@ public class Data {
             Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
 }

@@ -30,7 +30,7 @@ class PersonaController extends Controller
             $persona = Persona::get();
                     
             if($persona){
-                $result = array("code" => 200, "state" => true, "data" => $persona);
+                $result = $persona;
             }        
             
         } catch (\Exception $e){

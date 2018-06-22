@@ -1,28 +1,16 @@
 package model;
 
-public class Persona {
+public class PersonaSelect {
     private String rut;
     private String nombre;
     private String apellido;
     private String direccion;
-    private int edad;
-    private int paisRecidencia_fk;
-    private int nacionalidad_fk;
+    private String edad;
+    private String paisRecidencia_fk;
+    private String nacionalidad_fk;
 
-    public Persona() {
+    public PersonaSelect() {
     }
-
-    public Persona(String rut, String nombre, String apellido, String direccion, int edad, int paisRecidencia_fk, int nacionalidad_fk) {
-        this.rut = rut;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.direccion = direccion;
-        this.edad = edad;
-        this.paisRecidencia_fk = paisRecidencia_fk;
-        this.nacionalidad_fk = nacionalidad_fk;
-    }
-    
-    
 
     public String getRut() {
         return rut;
@@ -56,32 +44,30 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
-    public int getPaisResidencia_fk() {
+    public String getPaisRecidencia_fk() {
         return paisRecidencia_fk;
     }
 
-    public void setPaisResidencia_fk(int paisRecidencia_fk) {
+    public void setPaisRecidencia_fk(String paisRecidencia_fk) {
         this.paisRecidencia_fk = paisRecidencia_fk;
     }
 
-    public int getNacionalidad_fk() {
+    public String getNacionalidad_fk() {
         return nacionalidad_fk;
     }
 
-    public void setNacionalidad_fk(int nacionalidad_fk) {
+    public void setNacionalidad_fk(String nacionalidad_fk) {
         this.nacionalidad_fk = nacionalidad_fk;
     }
-
-    @Override
-    public String toString() {
-        return rut;
-    }    
+    
+    
+    
 }

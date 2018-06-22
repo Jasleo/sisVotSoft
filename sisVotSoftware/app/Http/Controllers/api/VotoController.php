@@ -27,7 +27,7 @@ class VotoController extends Controller {
             $result = array("code" => 200, "state" => true, "data" => array());
             $voto = Voto::get();
             if ($voto) {
-                $result = array("code" => 200, "state" => true, "data" => $voto);
+                $result = $voto;
             }
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());
