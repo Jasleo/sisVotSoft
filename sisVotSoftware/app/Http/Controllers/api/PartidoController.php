@@ -28,7 +28,7 @@ class PartidoController extends Controller
             $partido = Partido::get();
 
             if ($partido) {
-                $result = array("code" => 200, "state" => true, "data" => $partido);
+                $result = $partido;
             }
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());

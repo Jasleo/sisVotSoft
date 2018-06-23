@@ -305,5 +305,11 @@ INSERT INTO persona VALUES('19851578-4','Nilsson','Loyola Ilabaca','Av Puente #6
 INSERT INTO cuenta VALUES(null,'19851578-4','admin',1);
 INSERT INTO cuenta VALUES(null,'19851468-3','diego123',2);
 
+INSERT INTO partido VALUES(null,'Partido por la Democracia',1987);
+INSERT INTO partido VALUES(null,'Renovación Nacional',1987);
+INSERT INTO partido VALUES(null,'Partido Socialista',1933);
+INSERT INTO partido VALUES(null,'Partido Radical Socialdemócrata',1994);
+
+
 SELECT * FROM pais;
 SELECT * FROM nacionalidad;

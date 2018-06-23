@@ -160,6 +160,33 @@ public class Data {
         return null;
     }
 
+    public List<Partido> getListaPartidos() {
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listPartido")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "6325c05b-930f-9f4e-4cf4-f1a955d65d0b")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            Partido[] par;
+            par = mapper.readValue(respuesta, Partido[].class);
+
+            return Arrays.asList(par);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
     //guardar en la api
     public void registrarPersona(Persona persona) {
         try {

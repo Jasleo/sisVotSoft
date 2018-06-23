@@ -52,7 +52,7 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
 });
 
 //admin
-
-//$router->get('/api/v1/personas', function () use ($router) {
-//    return $results = DB::select("SELECT * FROM persona");
+//
+//$router->get('/api/v1/listPersona/{rut}', function () use ($router) {
+//    return $results = DB::select("SELECT * FROM persona WHERE ");
 //});

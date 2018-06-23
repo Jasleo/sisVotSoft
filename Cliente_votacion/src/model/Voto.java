@@ -9,6 +9,13 @@ public class Voto {
     public Voto() {
     }
 
+    public Voto(String fecha_voto, String votante_fk, int candidato_fk) {
+        this.fecha_voto = fecha_voto;
+        this.votante_fk = votante_fk;
+        this.candidato_fk = candidato_fk;
+    }
+    
+
     public int getId() {
         return id;
     }

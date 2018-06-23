@@ -8,6 +8,13 @@ public class Partido {
     public Partido() {
     }
 
+    public Partido(String Descripcion, int anio_fundacion) {
+        this.Descripcion = Descripcion;
+        this.anio_fundacion = anio_fundacion;
+    }
+    
+    
+
     public int getId() {
         return id;
     }
@@ -34,7 +41,7 @@ public class Partido {
 
     @Override
     public String toString() {
-        return "Partido{" + "id=" + id + ", Descripcion=" + Descripcion + ", anio_fundacion=" + anio_fundacion + '}';
+        return Descripcion;
     }
     
     
