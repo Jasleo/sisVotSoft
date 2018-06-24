@@ -53,6 +53,15 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
 
 //admin
 //
-//$router->get('/api/v1/listPersona/{rut}', function () use ($router) {
-//    return $results = DB::select("SELECT * FROM persona WHERE ");
-//});
+$router->get('/api/v1/listPersona/{texto}', function ($texto) {
+//    return $results = DB::select("SELECT * FROM persona WHERE rut like '19851468-3'");
+    return $results = DB::select("SELECT * FROM persona WHERE rut like '%$texto%' or nombre like '%$texto%' or apellido like '%$texto%'");
+});
+
+$router->get('/api/v1/getPersona/{rut}', function ($rut) {
+    return $results = DB::select("SELECT * FROM persona WHERE rut like '%$rut%'");
+});
+
+$router->get('/api/v1/getCandidato/{rut}', function ($rut) {
+    return $results = DB::select("SELECT candidato.id AS 'id', candidato.persona_fk AS 'rut', persona.nombre AS 'nombre', persona.apellido AS 'apellido', partido.descripcion AS 'partido' FROM persona, partido, candidato WHERE persona.rut = candidato.persona_fk AND partido.id = candidato.partido_fk AND persona.rut like '$rut'");
+});

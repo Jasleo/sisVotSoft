@@ -65,6 +65,7 @@ CREATE TABLE candidato(
 );
 
 
+
 CREATE TABLE voto(
     id INT auto_increment,
     fecha_voto DATETIME,
@@ -302,14 +303,34 @@ INSERT INTO privilegio VALUES(null,'Normal');
 INSERT INTO persona VALUES('19851468-3','Diego','Henríquez Miranda','Av España #90',20,39,39);
 INSERT INTO persona VALUES('19851578-4','Nilsson','Loyola Ilabaca','Av Puente #69',20,39,39);
 
+INSERT INTO persona VALUES('8072179-7','Eduardo','Frei Ruiz-Tagle','Av Ohiggins #190',68,39,39);
+INSERT INTO persona VALUES('13458906-2','Sebastián','Piñera Echeñique','Calle Juan Bautista #239',56,39,39);
+INSERT INTO persona VALUES('16908265-1','Marco','Enríquez-Ominami','Ezequiel González #2',48,39,39);
+
 INSERT INTO cuenta VALUES(null,'19851578-4','admin',1);
 INSERT INTO cuenta VALUES(null,'19851468-3','diego123',2);
+
+INSERT INTO cuenta VALUES(null,'8072179-7','frei987',2);
+INSERT INTO cuenta VALUES(null,'13458906-2','piñi654',2);
+INSERT INTO cuenta VALUES(null,'16908265-1','meo321',2);
 
 INSERT INTO partido VALUES(null,'Partido por la Democracia',1987);
 INSERT INTO partido VALUES(null,'Renovación Nacional',1987);
 INSERT INTO partido VALUES(null,'Partido Socialista',1933);
 INSERT INTO partido VALUES(null,'Partido Radical Socialdemócrata',1994);
 
+INSERT INTO candidato VALUES (null,1,'8072179-7');
+INSERT INTO candidato VALUES (null,2,'13458906-2');
+INSERT INTO candidato VALUES (null,3,'16908265-1');
 
 SELECT * FROM pais;
 SELECT * FROM nacionalidad;
+SELECT * FROM persona;
+
+SELECT candidato.persona_fk AS 'rut', persona.nombre AS 'nombre', persona.apellido AS 'apellido', partido.descripcion AS 'partido' 
+FROM persona, partido, candidato
+WHERE persona.rut = candidato.persona_fk AND 
+partido.id = candidato.partido_fk AND 
+persona.nombre LIKE '%co%'
+
+SELECT c.comuna, p.provincia, r.region FROM Comunas c INNER JOIN Provincias p ON c.idprovincia= p.idprovincia INNER JOIN Regiones r ON r.IdRegion = p.IdRegion

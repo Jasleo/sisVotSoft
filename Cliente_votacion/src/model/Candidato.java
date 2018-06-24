@@ -9,6 +9,12 @@ public class Candidato {
     public Candidato() {
     }
 
+    public Candidato(int partido_fk, String persona_fk) {
+        this.partido_fk = partido_fk;
+        this.persona_fk = persona_fk;
+    }
+    
+
     public int getId() {
         return id;
     }

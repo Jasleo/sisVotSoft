@@ -27,7 +27,7 @@ class CandidatoController extends Controller {
             $candidato = Candidato::get();
 
             if ($candidato) {
-                $result = array("code" => 200, "state" => true, "data" => $candidato);
+                $result = $candidato;
             }
         } catch (\Exception $e) {
             $result = array("code" => 500, "state" => false, "data" => $e->getMessage());

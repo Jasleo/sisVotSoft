@@ -12,6 +12,18 @@ public class PersonaSelect {
     public PersonaSelect() {
     }
 
+    public PersonaSelect(String rut, String nombre, String apellido, String direccion, String edad, String paisRecidencia_fk, String nacionalidad_fk) {
+        this.rut = rut;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.edad = edad;
+        this.paisRecidencia_fk = paisRecidencia_fk;
+        this.nacionalidad_fk = nacionalidad_fk;
+    }
+    
+    
+
     public String getRut() {
         return rut;
     }

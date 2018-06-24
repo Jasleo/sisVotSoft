@@ -80,6 +80,36 @@ public class Data {
         return null;
     }
 
+    public List<PersonaSelect> getListaPersonaByTexto(String texto) {
+
+        OkHttpClient client = new OkHttpClient();
+
+        MediaType mediaType = MediaType.parse("application/octet-stream");
+        RequestBody body = RequestBody.create(mediaType, texto);
+        System.out.println("EL TEXTO QUE LLEGA ES : " + texto);
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listPersona/" + texto)
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "8ab6b394-fdf2-6bf8-8bb5-531a6e366b20")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            PersonaSelect[] per;
+            per = mapper.readValue(respuesta, PersonaSelect[].class);
+
+            return Arrays.asList(per);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
     public List<Cuenta> getListaCuentas() {
 
         OkHttpClient client = new OkHttpClient();
@@ -179,6 +209,98 @@ public class Data {
             par = mapper.readValue(respuesta, Partido[].class);
 
             return Arrays.asList(par);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public MostrarCandidato getCandidatosParaVotar(String rut) {
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/getCandidato/" + rut)
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "315f4793-a5a3-3888-f5cb-e35be414540f")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            MostrarCandidato[] mc;
+            mc = mapper.readValue(respuesta, MostrarCandidato[].class);
+
+            List<MostrarCandidato> lista = Arrays.asList(mc);
+            MostrarCandidato candidato = new MostrarCandidato();
+
+            for (MostrarCandidato p : lista) {
+                candidato = new MostrarCandidato(p.getId(), p.getRut(), p.getNombre(), p.getApellido(), p.getPartido());
+            }
+            return candidato;
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public List<CandidatoSelect> getListaCandidatos() {
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/listCandidato")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "398cd408-965a-229c-b924-d435b5f922cc")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            CandidatoSelect[] par;
+            par = mapper.readValue(respuesta, CandidatoSelect[].class);
+
+            return Arrays.asList(par);
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public PersonaSelect getPersonaByRut(String rut) {
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/getPersona/" + rut)
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "ec606a2d-f0df-9362-8e56-bc72370a7aef")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            PersonaSelect[] per;
+            per = mapper.readValue(respuesta, PersonaSelect[].class);
+
+            List<PersonaSelect> lista = Arrays.asList(per);
+            PersonaSelect persona = new PersonaSelect();
+
+            for (PersonaSelect p : lista) {
+                persona = new PersonaSelect(p.getRut(), p.getNombre(), p.getApellido(), p.getDireccion(), p.getEdad(), p.getPaisRecidencia_fk(), p.getNacionalidad_fk());
+            }
+            return persona;
 
         } catch (IOException ex) {
             Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
