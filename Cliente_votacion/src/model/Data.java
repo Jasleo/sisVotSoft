@@ -330,8 +330,8 @@ public class Data {
             OkHttpClient client = new OkHttpClient();
 
             MediaType mediaType = MediaType.parse("application/json");
-            RequestBody body = RequestBody.create(mediaType, json);
-//            RequestBody body = RequestBody.create(mediaType, "{\n    \"rut\": \"16784799-8\",\n    \"nombre\": \"Daniela\",\n    \"apellido\": \"Gaete Flores\",\n    \"direccion\": \"Calle Los Paltos #21\",\n    \"edad\": 45,\n    \"paisRecidencia_fk\": 39,\n    \"nacionalidad_fk\": 39\n\t\n}");
+//            RequestBody body = RequestBody.create(mediaType, json);
+            RequestBody body = RequestBody.create(mediaType, "{\n    \"rut\": \"" + persona.getRut() + "\",\n    \"nombre\": \"" + persona.getNombre() + "\",\n    \"apellido\": \"" + persona.getApellido() + "\",\n    \"direccion\": \"" + persona.getDireccion() + "\",\n    \"edad\":" + persona.getEdad() + ",\n    \"paisRecidencia_fk\":" + persona.getPaisResidencia_fk() + ",\n    \"nacionalidad_fk\":" + persona.getNacionalidad_fk() + "\n\t\n}");
             Request request = new Request.Builder()
                     .url("http://localhost:8000/api/v1/persona")
                     .post(body)
