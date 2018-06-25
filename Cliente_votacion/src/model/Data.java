@@ -312,21 +312,32 @@ public class Data {
     //guardar en la api
     public void registrarPersona(Persona persona) {
         try {
+            System.out.println("RUT : " + persona.getRut());
+            System.out.println("Nombre : " + persona.getNombre());
+            System.out.println("Apellido : " + persona.getApellido());
+            System.out.println("Direccion : " + persona.getDireccion());
+            System.out.println("Edad : " + persona.getEdad());
+            System.out.println("Pais : " + persona.getPaisResidencia_fk());
+            System.out.println("Nacionalida : " + persona.getNacionalidad_fk());
+
             //aca transformamos los datos que recibimos en un json
             StringWriter writer = new StringWriter();
             mapper.writeValue(writer, persona);
             String json = writer.toString();
+            System.out.println("EL JSON : " + json);
 
             // mandamos los datos a la api
             OkHttpClient client = new OkHttpClient();
 
-            MediaType mediaType = MediaType.parse("application/octet-stream");
+            MediaType mediaType = MediaType.parse("application/json");
             RequestBody body = RequestBody.create(mediaType, json);
+//            RequestBody body = RequestBody.create(mediaType, "{\n    \"rut\": \"16784799-8\",\n    \"nombre\": \"Daniela\",\n    \"apellido\": \"Gaete Flores\",\n    \"direccion\": \"Calle Los Paltos #21\",\n    \"edad\": 45,\n    \"paisRecidencia_fk\": 39,\n    \"nacionalidad_fk\": 39\n\t\n}");
             Request request = new Request.Builder()
                     .url("http://localhost:8000/api/v1/persona")
                     .post(body)
+                    .addHeader("content-type", "application/json")
                     .addHeader("cache-control", "no-cache")
-                    .addHeader("postman-token", "16270694-a679-6a47-f402-9150cadc65bc")
+                    .addHeader("postman-token", "63ecbe34-bd97-95ab-a2d4-2d652270f773")
                     .build();
 
             Response response = client.newCall(request).execute();
@@ -335,23 +346,107 @@ public class Data {
         }
     }
 
+    public void crearCuenta(Cuenta cuenta) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, cuenta);
+            String json = writer.toString();
+
+            // mandamos los datos a la api
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, json);
+//            RequestBody body = RequestBody.create(mediaType, "{\n    \"id\": 1,\n    \"rutPersona_fk\": \"19851578-4\",\n    \"pass\": \"admin\",\n    \"privilegio_fk\": 1\n}");
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/cuenta")
+                    .post(body)
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "12c78200-ea64-a9d0-ff52-4a9ef4ec597e")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void registrarCandidato(Candidato candidato) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, candidato);
+            String json = writer.toString();
+
+            // mandamos los datos a la api
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, json);
+//            RequestBody body = RequestBody.create(mediaType, "{\n    \"id\": 0,\n    \"partido_fk\": 3,\n    \"persona_fk\": \"16784799-8\"\n}");
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/candidato")
+                    .post(body)
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "016072f2-88e3-f136-7e2f-666029ed9399")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void registrarVoto(Voto voto) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, voto);
+            String json = writer.toString();
+
+            // mandamos los datos a la api
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, json);
+//            RequestBody body = RequestBody.create(mediaType, "{\n    \"id\": 0,\n    \"fecha_voto\": \"2018-06-24 19:18:19\",\n    \"votante_fk\": \"8072179-7\",\n    \"candidato_fk\": 1\n}");
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/voto")
+                    .post(body)
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "75736ed7-167e-ae65-536d-7d9f469ea3d1")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    //listo
     public void registrarPartido(Partido partido) {
         try {
             //aca transformamos los datos que recibimos en un json
             StringWriter writer = new StringWriter();
             mapper.writeValue(writer, partido);
             String json = writer.toString();
+            System.out.println("EL JSON : " + json);
 
             OkHttpClient client = new OkHttpClient();
 
-            // mandamos los datos a la api
-            MediaType mediaType = MediaType.parse("application/octet-stream");
+            MediaType mediaType = MediaType.parse("application/json");
             RequestBody body = RequestBody.create(mediaType, json);
+//            RequestBody body = RequestBody.create(mediaType, "{\n\t\"id\" : 0,\n\t\"descripcion\" : \"Partido Prueba\",\n\t\"anio_fundacion\" : 2018\n\t\n}");
             Request request = new Request.Builder()
                     .url("http://localhost:8000/api/v1/partido")
                     .post(body)
-                    .addHeader("Cache-Control", "no-cache")
-                    .addHeader("Postman-Token", "2e5a4b0c-394f-4af3-9ba5-c6f2abbb8b5f")
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "5a7d31ef-e49c-db77-b212-c487ea961833")
                     .build();
 
             Response response = client.newCall(request).execute();

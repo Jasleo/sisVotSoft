@@ -323,14 +323,14 @@ INSERT INTO candidato VALUES (null,1,'8072179-7');
 INSERT INTO candidato VALUES (null,2,'13458906-2');
 INSERT INTO candidato VALUES (null,3,'16908265-1');
 
+INSERT INTO voto VALUES (null,now(),'8072179-7',1);
+
+
+-- USE sisVot_bd;
+
 SELECT * FROM pais;
 SELECT * FROM nacionalidad;
 SELECT * FROM persona;
-
-SELECT candidato.persona_fk AS 'rut', persona.nombre AS 'nombre', persona.apellido AS 'apellido', partido.descripcion AS 'partido' 
-FROM persona, partido, candidato
-WHERE persona.rut = candidato.persona_fk AND 
-partido.id = candidato.partido_fk AND 
-persona.nombre LIKE '%co%'
-
-SELECT c.comuna, p.provincia, r.region FROM Comunas c INNER JOIN Provincias p ON c.idprovincia= p.idprovincia INNER JOIN Regiones r ON r.IdRegion = p.IdRegion
+SELECT * FROM partido;
+SELECT * FROM cuenta;
+SELECT * FROM voto;
