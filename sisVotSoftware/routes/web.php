@@ -30,12 +30,13 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
 
     $app->get('listCuenta', 'CuentaController@listCuenta');
     $app->post('cuenta', 'CuentaController@createCuenta');
-    $app->delete('cuenta/{id}', 'CuentaController@deleteCuenta');
+//    $app->delete('cuenta/{id}', 'CuentaController@deleteCuenta');
+    $app->put('cuenta/{id}', 'CuentaController@updateCuenta');
 
     $app->get('listPersona', 'PersonaController@listPersona');
     $app->post('persona', 'PersonaController@createPersona');
-    $app->delete('persona/{id}', 'PersonaController@deletePersona');
-    //$app->put('persona/in/{id}', 'PersonaController@updatePersona');
+//    $app->delete('persona/{id}', 'PersonaController@deletePersona');
+    $app->put('persona/up/{id}', 'PersonaController@updatePersona');
 
     $app->get('listPartido', 'PartidoController@listPartido');
     $app->post('partido', 'PartidoController@createPartido');

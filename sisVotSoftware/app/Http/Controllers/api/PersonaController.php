@@ -54,6 +54,14 @@ class PersonaController extends Controller
         return response()->json($result);
     }
 
-    //falta update
+//    public function updatePersona(Request $request, $rut) {
+//        try {
+//            $persona = Persona::create($request->all());
+//            $result = array("code" => 200, "state" => true, "data" => "Persona Registrada");
+//        } catch (\Exception $e) {
+//            $result = array("code" => 500, "state" => false, "data" => $e->getMessage());
+//        }
+//        return response()->json($result);
+//    }
 
 }

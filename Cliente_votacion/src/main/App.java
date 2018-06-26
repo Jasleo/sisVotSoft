@@ -71,7 +71,6 @@ public class App extends javax.swing.JFrame {
         meVotacion = new javax.swing.JMenu();
         miAddPartido = new javax.swing.JMenuItem();
         miEmitirVoto = new javax.swing.JMenuItem();
-        miResult = new javax.swing.JMenuItem();
         meSalir = new javax.swing.JMenu();
         miCerrarSesion = new javax.swing.JMenuItem();
         jfMenuUserComun = new javax.swing.JFrame();
@@ -249,9 +248,6 @@ public class App extends javax.swing.JFrame {
             }
         });
         meVotacion.add(miEmitirVoto);
-
-        miResult.setText("Resultados");
-        meVotacion.add(miResult);
 
         menAdmin.add(meVotacion);
 
@@ -1670,7 +1666,6 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JMenuItem miChangeAdress;
     private javax.swing.JMenuItem miChangePass;
     private javax.swing.JMenuItem miEmitirVoto;
-    private javax.swing.JMenuItem miResult;
     private javax.swing.JMenuItem miVotarVo;
     private javax.swing.JPanel pnlAdmin;
     private javax.swing.JLabel pnlLogoServel;
