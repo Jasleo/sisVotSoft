@@ -350,6 +350,12 @@ public class App extends javax.swing.JFrame {
 
         jLabel2.setText("R.U.N :");
 
+        txtAddRun.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAddRunKeyTyped(evt);
+            }
+        });
+
         jLabel3.setText("Nombre :");
 
         jLabel4.setText("Apellido :");
@@ -361,6 +367,24 @@ public class App extends javax.swing.JFrame {
         jLabel7.setText("Pais Residencia :");
 
         jLabel8.setText("Nacionalidad :");
+
+        txtAddNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAddNombreKeyTyped(evt);
+            }
+        });
+
+        txtAddApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAddApellidoKeyTyped(evt);
+            }
+        });
+
+        txtAddEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAddEdadKeyTyped(evt);
+            }
+        });
 
         btnContinuarAdd.setText("Continuar");
         btnContinuarAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -524,10 +548,28 @@ public class App extends javax.swing.JFrame {
 
         jLabel15.setText("Nacionalidad :");
 
+        txtActNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtActNombreKeyTyped(evt);
+            }
+        });
+
+        txtActApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtActApellidoKeyTyped(evt);
+            }
+        });
+
         btnActVotante.setText("Actualizar Votante");
         btnActVotante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActVotanteActionPerformed(evt);
+            }
+        });
+
+        txtActEdad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtActEdadKeyTyped(evt);
             }
         });
 
@@ -828,6 +870,18 @@ public class App extends javax.swing.JFrame {
         jLabel21.setText("Nombre Partido :");
 
         jLabel22.setText("Año Fundacion :");
+
+        txtNombrePartido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombrePartidoKeyTyped(evt);
+            }
+        });
+
+        txtAnioFundacionPartido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnioFundacionPartidoKeyTyped(evt);
+            }
+        });
 
         btnInscribirPartido.setText("Inscribir Partido");
         btnInscribirPartido.addActionListener(new java.awt.event.ActionListener() {
@@ -1319,6 +1373,8 @@ public class App extends javax.swing.JFrame {
         cboPaisResidencia.setEnabled(true);
         btnContinuarAdd.setEnabled(true);
 
+        cargarDatosTabla();
+
         JOptionPane.showMessageDialog(this, "Registrado !!");
 
         jfIncribirPersona.setVisible(false);
@@ -1353,6 +1409,8 @@ public class App extends javax.swing.JFrame {
             txtAnioFundacionPartido.setText("");
 
             JOptionPane.showMessageDialog(this, "Partido Inscrito !!");
+
+            cargarCbo();
 
             jfInscribirPartido.setVisible(false);
         }
@@ -1530,6 +1588,8 @@ public class App extends javax.swing.JFrame {
 
         JOptionPane.showMessageDialog(this, "Datos Actualizados !!");
 
+        cargarDatosTabla();
+
         jfUpdateDatos.setVisible(false);
 
     }//GEN-LAST:event_btnActVotanteActionPerformed
@@ -1589,6 +1649,8 @@ public class App extends javax.swing.JFrame {
 
             JOptionPane.showMessageDialog(this, "Registrado !!");
 
+            cargarDatosTabla();
+
             jfAddCandidatura.setVisible(false);
         }
     }//GEN-LAST:event_btnAddCandidaturaActionPerformed
@@ -1630,6 +1692,126 @@ public class App extends javax.swing.JFrame {
         btnVotar.setEnabled(false);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
+    private void txtAddRunKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddRunKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isLetter(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Numeros");
+
+        }
+
+
+    }//GEN-LAST:event_txtAddRunKeyTyped
+
+    private void txtAddEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddEdadKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isLetter(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Numeros");
+
+        }
+
+    }//GEN-LAST:event_txtAddEdadKeyTyped
+
+    private void txtAddNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddNombreKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Letras");
+
+        }
+    }//GEN-LAST:event_txtAddNombreKeyTyped
+
+    private void txtAddApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAddApellidoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Letras");
+
+        }
+    }//GEN-LAST:event_txtAddApellidoKeyTyped
+
+    private void txtActNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtActNombreKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Letras");
+
+        }
+    }//GEN-LAST:event_txtActNombreKeyTyped
+
+    private void txtActApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtActApellidoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Letras");
+
+        }
+    }//GEN-LAST:event_txtActApellidoKeyTyped
+
+    private void txtActEdadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtActEdadKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isLetter(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Numeros");
+
+        }
+    }//GEN-LAST:event_txtActEdadKeyTyped
+
+    private void txtAnioFundacionPartidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioFundacionPartidoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isLetter(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Numeros");
+
+        }
+    }//GEN-LAST:event_txtAnioFundacionPartidoKeyTyped
+
+    private void txtNombrePartidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombrePartidoKeyTyped
+        char c = evt.getKeyChar();
+
+        if (Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+
+            JOptionPane.showMessageDialog(this, "Solo Letras");
+
+        }
+    }//GEN-LAST:event_txtNombrePartidoKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -1644,16 +1826,24 @@ public class App extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(App.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

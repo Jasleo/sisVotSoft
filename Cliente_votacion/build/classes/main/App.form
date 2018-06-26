@@ -364,6 +364,9 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtAddRun">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddRunKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -396,12 +399,21 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtAddNombre">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddNombreKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtAddApellido">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddApellidoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtAddDireccion">
             </Component>
             <Component class="javax.swing.JTextField" name="txtAddEdad">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAddEdadKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="cboPaisResidencia">
               <Properties>
@@ -679,8 +691,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtActNombre">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtActNombreKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtActApellido">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtActApellidoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtActDireccion">
             </Component>
@@ -713,6 +731,9 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtActEdad">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtActEdadKeyTyped"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1107,8 +1128,14 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNombrePartido">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNombrePartidoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtAnioFundacionPartido">
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAnioFundacionPartidoKeyTyped"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnInscribirPartido">
               <Properties>
