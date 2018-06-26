@@ -66,3 +66,7 @@ $router->get('/api/v1/getPersona/{rut}', function ($rut) {
 $router->get('/api/v1/getCandidato/{rut}', function ($rut) {
     return $results = DB::select("SELECT candidato.id AS 'id', candidato.persona_fk AS 'rut', persona.nombre AS 'nombre', persona.apellido AS 'apellido', partido.descripcion AS 'partido' FROM persona, partido, candidato WHERE persona.rut = candidato.persona_fk AND partido.id = candidato.partido_fk AND persona.rut like '$rut'");
 });
+
+$router->get('/api/v1/getCuenta/{rut}', function ($rut) {
+    return $results = DB::select("SELECT * FROM cuenta WHERE rutPersona_fk like '$rut'");
+});

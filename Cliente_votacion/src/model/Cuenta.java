@@ -15,6 +15,15 @@ public class Cuenta {
         this.pass = pass;
         this.privilegio_fk = privilegio_fk;
     }   
+
+    public Cuenta(int id, String rutPersona_fk, String pass, int privilegio_fk) {
+        this.id = id;
+        this.rutPersona_fk = rutPersona_fk;
+        this.pass = pass;
+        this.privilegio_fk = privilegio_fk;
+    }
+    
+    
     
 
     public int getId() {

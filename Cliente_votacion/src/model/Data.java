@@ -309,6 +309,38 @@ public class Data {
         return null;
     }
 
+    public Cuenta getCuentaByRut(String rut) {
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/getCuenta/" + rut)
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "6feac7fe-2be7-f7b8-7de4-9f7360e0b921")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            Cuenta[] cu;
+            cu = mapper.readValue(respuesta, Cuenta[].class);
+
+            List<Cuenta> lista = Arrays.asList(cu);
+            Cuenta cuenta = new Cuenta();
+
+            for (Cuenta c : lista) {
+                cuenta = new Cuenta(c.getId(), c.getRutPersona_fk(), c.getPass(), c.getPrivilegio_fk());
+            }
+            return cuenta;
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
     //guardar en la api
     public void registrarPersona(Persona persona) {
         try {
@@ -455,4 +487,56 @@ public class Data {
         }
     }
 
+    public void updatePass(Cuenta cuenta) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, cuenta);
+            String json = writer.toString();
+            System.out.println("EL JSON : " + json);
+
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, json);
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/cuenta/" + cuenta.getId())
+                    .put(body)
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "19455c65-9be7-8b69-7fb5-4f1d129e93d0")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void updatePersona(Persona persona) {
+        try {
+            //aca transformamos los datos que recibimos en un json
+            StringWriter writer = new StringWriter();
+            mapper.writeValue(writer, persona);
+            String json = writer.toString();
+            System.out.println("EL JSON : " + json);
+
+            OkHttpClient client = new OkHttpClient();
+
+            MediaType mediaType = MediaType.parse("application/json");
+            RequestBody body = RequestBody.create(mediaType, json);
+            Request request = new Request.Builder()
+                    .url("http://localhost:8000/api/v1/persona/" + persona.getRut())
+                    .put(body)
+                    .addHeader("content-type", "application/json")
+                    .addHeader("cache-control", "no-cache")
+                    .addHeader("postman-token", "a8e1fb0f-f348-8762-3874-b829f16fcabb")
+                    .build();
+
+            Response response = client.newCall(request).execute();
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

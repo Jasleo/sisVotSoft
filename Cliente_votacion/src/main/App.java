@@ -1362,9 +1362,13 @@ public class App extends javax.swing.JFrame {
     private void btnUpdatePassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePassActionPerformed
         String rutAct = txtRunUpdatePass.getText();
         String newPass = txtNuevaPassUpdate.getText();
+        // necesito el id de la cuenta para actulizar, int id 
+        Cuenta cuentaDos = data.getCuentaByRut(rutAct);
+        int idCuenta = cuentaDos.getId();
+        int privilegioAct = cuentaDos.getPrivilegio_fk();
 
-        Cuenta cuenta = new Cuenta(rutAct, newPass, privilegio);
-//       data.updatePass();
+        Cuenta cuenta = new Cuenta(idCuenta, rutAct, newPass, privilegioAct);
+        data.updatePass(cuenta);
     }//GEN-LAST:event_btnUpdatePassActionPerformed
 
     private void miChangePassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miChangePassActionPerformed
@@ -1383,6 +1387,10 @@ public class App extends javax.swing.JFrame {
         jfUpdatePass.setLocationRelativeTo(null);
 
         txtRunUpdatePass.setText(rutPersonaActual);
+
+        PersonaSelect persona = data.getPersonaByRut(rutPersonaActual);
+
+        txtNombreUpdatePass.setText(persona.getNombre() + " " + persona.getApellido());
     }//GEN-LAST:event_miCambiarPassVoActionPerformed
 
     private void btnVotarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVotarActionPerformed
@@ -1456,6 +1464,8 @@ public class App extends javax.swing.JFrame {
         int paisID = pa.getId();
         int nacionalidadID = na.getId();
 
+        Persona persona = new Persona(rut, nombre, apellido, direccion, edad, paisID, nacionalidadID);
+        data.updatePersona(persona);
 
     }//GEN-LAST:event_btnActVotanteActionPerformed
 
@@ -1531,7 +1541,7 @@ public class App extends javax.swing.JFrame {
             txtNombreCandidatoVotar.setText(p.getNombre());
             txtApellidoCandidatoVotar.setText(p.getApellido());
             txtPartidoCandidatoVotar.setText(p.getPartido());
-            
+
             btnVotar.setEnabled(true);
         }
     }//GEN-LAST:event_tblCandidatosMouseReleased
@@ -1541,7 +1551,7 @@ public class App extends javax.swing.JFrame {
         txtNombreCandidatoVotar.setText("");
         txtApellidoCandidatoVotar.setText("");
         txtPartidoCandidatoVotar.setText("");
-        
+
         btnVotar.setEnabled(false);
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
@@ -1721,7 +1731,7 @@ public class App extends javax.swing.JFrame {
         txtNombreCandidatoVotar.setEditable(false);
         txtApellidoCandidatoVotar.setEditable(false);
         txtPartidoCandidatoVotar.setEditable(false);
-        
+
         btnVotar.setEnabled(false);
 
         this.setLocationRelativeTo(null);
