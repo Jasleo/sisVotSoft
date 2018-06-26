@@ -36,7 +36,7 @@ $router->group(['namespace' => 'api', 'prefix' => 'api/v1'], function ($app) {
     $app->get('listPersona', 'PersonaController@listPersona');
     $app->post('persona', 'PersonaController@createPersona');
 //    $app->delete('persona/{id}', 'PersonaController@deletePersona');
-    $app->put('persona/up/{id}', 'PersonaController@updatePersona');
+    $app->put('persona/{rut}', 'PersonaController@updatePersona');
 
     $app->get('listPartido', 'PartidoController@listPartido');
     $app->post('partido', 'PartidoController@createPartido');

@@ -48,8 +48,6 @@ class CuentaController extends Controller {
     }
 
     public function updateCuenta(Request $request, $id) {
-
-        // Comprobamos si el id de cuenta que nos están pasando existe o no.
         $cuenta = Cuenta::find($id);
 
         $id_new = $request->input('id');
@@ -57,11 +55,11 @@ class CuentaController extends Controller {
         $pass = $request->input('pass');
         $privilegio_fk = $request->input('privilegio_fk');
 
-        echo 'ID RESCATO : ' . $id_new;
-        echo ' RUT PERSONA : ' . $rutPersona_fk;
-        echo ' PASS : ' . $pass;
-        echo ' PRIVILEGIO : ' . $privilegio_fk;
-        
+//        echo 'ID RESCATO : ' . $id_new;
+//        echo ' RUT PERSONA : ' . $rutPersona_fk;
+//        echo ' PASS : ' . $pass;
+//        echo ' PRIVILEGIO : ' . $privilegio_fk;
+//        
         $cuenta->id = $id_new;
         $cuenta->rutPersona_fk = $rutPersona_fk;
         $cuenta->pass = $pass;
