@@ -1244,19 +1244,7 @@ public class App extends javax.swing.JFrame {
         // generamos una contraseña para la cuenta de la persona recien registrada
         String passGenerada = genPass.generarPass(genPass.MINUSCULAS + genPass.MAYUSCULAS + genPass.ESPECIALES, 12);
 
-        Pais pa;
-        Nacionalidad na;
-
-        pa = (Pais) cboPaisResidencia.getSelectedItem();
-        na = (Nacionalidad) cboNacionalidad.getSelectedItem();
-
         String rut = txtAddRun.getText();
-        String nombre = txtAddNombre.getText();
-        String apellido = txtAddApellido.getText();
-        String direccion = txtAddDireccion.getText();
-        int edad = Integer.parseInt(txtAddEdad.getText());
-        int paisID = pa.getId();
-        int nacionalidadID = na.getId();
 
         if (verificarRut(rut) == false) {
             JOptionPane.showMessageDialog(this, "El RUT (" + rut + ") Ya Existe");
@@ -1311,6 +1299,31 @@ public class App extends javax.swing.JFrame {
 
         Cuenta cuenta = new Cuenta(rutCuenta, passNueva, 2);
         data.crearCuenta(cuenta);
+
+        cboPaisResidencia.setSelectedIndex(0);
+        cboNacionalidad.setSelectedIndex(0);
+        txtAddRun.setText("");
+        txtAddNombre.setText("");
+        txtAddApellido.setText("");
+        txtAddDireccion.setText("");
+        txtAddEdad.setText("");
+        txtAddRun.setText("");
+        lblPassGenerada.setText("");
+        btnAddVotante.setEnabled(false);
+        txtAddRun.setEditable(true);
+        txtAddNombre.setEditable(true);
+        txtAddApellido.setEditable(true);
+        txtAddDireccion.setEditable(true);
+        txtAddEdad.setEditable(true);
+        cboNacionalidad.setEnabled(true);
+        cboPaisResidencia.setEnabled(true);
+        btnContinuarAdd.setEnabled(true);
+
+        JOptionPane.showMessageDialog(this, "Registrado !!");
+
+        jfIncribirPersona.setVisible(false);
+
+
     }//GEN-LAST:event_btnAddVotanteActionPerformed
 
     private void miChangeAdressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miChangeAdressActionPerformed
@@ -1335,6 +1348,13 @@ public class App extends javax.swing.JFrame {
 
             Partido partido = new Partido(nombrePartido, fundacionPartido);
             data.registrarPartido(partido);
+
+            txtNombrePartido.setText("");
+            txtAnioFundacionPartido.setText("");
+
+            JOptionPane.showMessageDialog(this, "Partido Inscrito !!");
+
+            jfInscribirPartido.setVisible(false);
         }
     }//GEN-LAST:event_btnInscribirPartidoActionPerformed
 
@@ -1369,6 +1389,13 @@ public class App extends javax.swing.JFrame {
 
         Cuenta cuenta = new Cuenta(idCuenta, rutAct, newPass, privilegioAct);
         data.updatePass(cuenta);
+
+        txtRunUpdatePass.setText("");
+        txtNombreUpdatePass.setText("");
+
+        JOptionPane.showMessageDialog(this, "Contraseña Actualizada !!");
+
+        jfUpdatePass.setVisible(false);
     }//GEN-LAST:event_btnUpdatePassActionPerformed
 
     private void miChangePassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miChangePassActionPerformed
@@ -1403,7 +1430,27 @@ public class App extends javax.swing.JFrame {
 
         Voto voto = new Voto(fechaVoto, rutVotante, idCandidatoVotar);
         data.registrarVoto(voto);
-        EstadoVoto(rutPersonaActual);
+
+        sufrago = EstadoVoto(rutPersonaActual);
+
+        if (privilegio == 1 && sufrago) {
+            miEmitirVoto.setEnabled(false);
+        }
+
+        if (privilegio == 2 && sufrago) {
+            miVotarVo.setEnabled(false);
+        }
+
+        lblIdCandidato.setText("");
+        txtNombreCandidatoVotar.setText("");
+        txtApellidoCandidatoVotar.setText("");
+        txtPartidoCandidatoVotar.setText("");
+
+        btnVotar.setEnabled(false);
+
+        JOptionPane.showMessageDialog(this, "Usted ha Votado");
+
+        jfEjercerVoto.setVisible(false);
 
 
     }//GEN-LAST:event_btnVotarActionPerformed
@@ -1467,6 +1514,24 @@ public class App extends javax.swing.JFrame {
         Persona persona = new Persona(rut, nombre, apellido, direccion, edad, paisID, nacionalidadID);
         data.updatePersona(persona);
 
+        txtActRun.setText("");
+        txtActNombre.setText("");
+        txtActApellido.setText("");
+        txtActDireccion.setText("");
+        txtActEdad.setText("");
+
+        cboActNacionalidad.setSelectedIndex(0);
+        cboActPaisResidencia.setSelectedIndex(0);
+
+        //lo desactivamos ya que no se puede actualizar
+        txtActRun.setEditable(true);
+
+        btnActVotante.setEnabled(false);
+
+        JOptionPane.showMessageDialog(this, "Datos Actualizados !!");
+
+        jfUpdateDatos.setVisible(false);
+
     }//GEN-LAST:event_btnActVotanteActionPerformed
 
     private void miVotarVoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miVotarVoActionPerformed
@@ -1500,7 +1565,7 @@ public class App extends javax.swing.JFrame {
         int partidoID = pa.getId();
 
         if (verificarCandidatura(rut) == false) {
-            JOptionPane.showMessageDialog(this, "El RUT (" + rut + ") Ya es Candidato", "ERROR", JOptionPane.ERROR);
+            JOptionPane.showMessageDialog(this, "El RUT (" + rut + ") Ya es Candidato", "ERROR", JOptionPane.ERROR_MESSAGE);
 
             txtRutCand.setText("");
             txtNombreCand.setText("");
@@ -1514,7 +1579,17 @@ public class App extends javax.swing.JFrame {
         } else {
             Candidato candidato = new Candidato(partidoID, rut);
             data.registrarCandidato(candidato);
+
+            txtRutCand.setText("");
+            txtNombreCand.setText("");
+            txtApellidoCand.setText("");
+            txtDireccionCand.setText("");
+
+            btnAddCandidatura.setEnabled(false);
+
             JOptionPane.showMessageDialog(this, "Registrado !!");
+
+            jfAddCandidatura.setVisible(false);
         }
     }//GEN-LAST:event_btnAddCandidaturaActionPerformed
 
