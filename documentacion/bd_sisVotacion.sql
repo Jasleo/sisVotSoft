@@ -303,12 +303,18 @@ INSERT INTO privilegio VALUES(null,'Normal');
 INSERT INTO persona VALUES('19851468-3','Diego','Henríquez Miranda','Av España #90',20,39,39);
 INSERT INTO persona VALUES('19851578-4','Nilsson','Loyola Ilabaca','Av Puente #69',20,39,39);
 
+INSERT INTO persona VALUES('18765478-3','Daniela','García Flores','Av Kennedy #21',23,39,39);
+INSERT INTO persona VALUES('13213415-8','Javiera','Suárez Nuñez','Poblacion Los Naranjos #2',36,39,39);
+
 INSERT INTO persona VALUES('8072179-7','Eduardo','Frei Ruiz-Tagle','Av Ohiggins #190',68,39,39);
 INSERT INTO persona VALUES('13458906-2','Sebastián','Piñera Echeñique','Calle Juan Bautista #239',56,39,39);
 INSERT INTO persona VALUES('16908265-1','Marco','Enríquez-Ominami','Ezequiel González #2',48,39,39);
 
 INSERT INTO cuenta VALUES(null,'19851578-4','admin',1);
 INSERT INTO cuenta VALUES(null,'19851468-3','diego123',2);
+
+INSERT INTO cuenta VALUES(null,'18765478-3','daniela987',1);
+INSERT INTO cuenta VALUES(null,'13213415-8','javi23',2);
 
 INSERT INTO cuenta VALUES(null,'8072179-7','frei987',2);
 INSERT INTO cuenta VALUES(null,'13458906-2','piñi654',2);

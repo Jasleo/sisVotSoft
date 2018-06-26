@@ -64,8 +64,8 @@ public class App extends javax.swing.JFrame {
         menAdmin = new javax.swing.JMenuBar();
         mePersona = new javax.swing.JMenu();
         miAddVotante = new javax.swing.JMenuItem();
-        miChangeAdress = new javax.swing.JMenuItem();
         miChangePass = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         meCandidato = new javax.swing.JMenu();
         miAddCandidatura = new javax.swing.JMenuItem();
         meVotacion = new javax.swing.JMenu();
@@ -191,8 +191,10 @@ public class App extends javax.swing.JFrame {
             .addGap(0, 255, Short.MAX_VALUE)
         );
 
+        mePersona.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/red.png"))); // NOI18N
         mePersona.setText("Persona");
 
+        miAddVotante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/agregar-usuario.png"))); // NOI18N
         miAddVotante.setText("Inscribir Votante");
         miAddVotante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,14 +203,7 @@ public class App extends javax.swing.JFrame {
         });
         mePersona.add(miAddVotante);
 
-        miChangeAdress.setText("Cambiar Datos");
-        miChangeAdress.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                miChangeAdressActionPerformed(evt);
-            }
-        });
-        mePersona.add(miChangeAdress);
-
+        miChangePass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lapiz (1).png"))); // NOI18N
         miChangePass.setText("Cambiar Mi Contraseña");
         miChangePass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -217,10 +212,21 @@ public class App extends javax.swing.JFrame {
         });
         mePersona.add(miChangePass);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lapiz.png"))); // NOI18N
+        jMenuItem1.setText("Cambiar Datos");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        mePersona.add(jMenuItem1);
+
         menAdmin.add(mePersona);
 
+        meCandidato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/agregar-usuario.png"))); // NOI18N
         meCandidato.setText("Candidato");
 
+        miAddCandidatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/agregar-usuario.png"))); // NOI18N
         miAddCandidatura.setText("Inscribir Candidatura");
         miAddCandidatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,8 +237,10 @@ public class App extends javax.swing.JFrame {
 
         menAdmin.add(meCandidato);
 
+        meVotacion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lista-de-control-en-un-papel-con-un-lapiz.png"))); // NOI18N
         meVotacion.setText("Votación");
 
+        miAddPartido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/archivo.png"))); // NOI18N
         miAddPartido.setText("Inscribir Partido");
         miAddPartido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,6 +249,7 @@ public class App extends javax.swing.JFrame {
         });
         meVotacion.add(miAddPartido);
 
+        miEmitirVoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/voto.png"))); // NOI18N
         miEmitirVoto.setText("Votar");
         miEmitirVoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -251,8 +260,10 @@ public class App extends javax.swing.JFrame {
 
         menAdmin.add(meVotacion);
 
+        meSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/boton-x.png"))); // NOI18N
         meSalir.setText("Salir");
 
+        miCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logout.png"))); // NOI18N
         miCerrarSesion.setText("Cerrar Sesion");
         miCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -295,8 +306,10 @@ public class App extends javax.swing.JFrame {
             .addGap(0, 261, Short.MAX_VALUE)
         );
 
+        meVotacionVo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lista-de-control-en-un-papel-con-un-lapiz.png"))); // NOI18N
         meVotacionVo.setText("Votación");
 
+        miVotarVo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/voto.png"))); // NOI18N
         miVotarVo.setText("Votar");
         miVotarVo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -305,6 +318,7 @@ public class App extends javax.swing.JFrame {
         });
         meVotacionVo.add(miVotarVo);
 
+        miCambiarPassVo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/lapiz.png"))); // NOI18N
         miCambiarPassVo.setText("Cambiar Contraseña");
         miCambiarPassVo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,8 +329,10 @@ public class App extends javax.swing.JFrame {
 
         jMenuBar1.add(meVotacionVo);
 
+        meSalirVo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/boton-x.png"))); // NOI18N
         meSalirVo.setText("Salir");
 
+        miCerrarSesionVo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logout.png"))); // NOI18N
         miCerrarSesionVo.setText("Cerrar Sesion");
         miCerrarSesionVo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -386,7 +402,8 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        btnContinuarAdd.setText("Continuar");
+        btnContinuarAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adelante.png"))); // NOI18N
+        btnContinuarAdd.setText(" Continuar");
         btnContinuarAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnContinuarAddActionPerformed(evt);
@@ -460,7 +477,7 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(cboNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(btnContinuarAdd)
                 .addGap(22, 22, 22))
         );
@@ -471,7 +488,8 @@ public class App extends javax.swing.JFrame {
 
         lblPassGenerada.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        btnAddVotante.setText("Registrar Votante");
+        btnAddVotante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nota.png"))); // NOI18N
+        btnAddVotante.setText(" Registrar Votante");
         btnAddVotante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddVotanteActionPerformed(evt);
@@ -560,7 +578,8 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        btnActVotante.setText("Actualizar Votante");
+        btnActVotante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nota.png"))); // NOI18N
+        btnActVotante.setText(" Actualizar Votante");
         btnActVotante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActVotanteActionPerformed(evt);
@@ -778,7 +797,8 @@ public class App extends javax.swing.JFrame {
 
         jLabel20.setText("Partido :");
 
-        btnAddCandidatura.setText("Inscribir Candidatura");
+        btnAddCandidatura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nota.png"))); // NOI18N
+        btnAddCandidatura.setText(" Inscribir Candidatura");
         btnAddCandidatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddCandidaturaActionPerformed(evt);
@@ -853,7 +873,7 @@ public class App extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jfAddCandidaturaLayout.setVerticalGroup(
             jfAddCandidaturaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -883,7 +903,8 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        btnInscribirPartido.setText("Inscribir Partido");
+        btnInscribirPartido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/nota.png"))); // NOI18N
+        btnInscribirPartido.setText(" Inscribir Partido");
         btnInscribirPartido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInscribirPartidoActionPerformed(evt);
@@ -951,7 +972,8 @@ public class App extends javax.swing.JFrame {
 
         jLabel26.setText("Nueva Contraseña :");
 
-        btnUpdatePass.setText("Cambiar Contraseña");
+        btnUpdatePass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/clave.png"))); // NOI18N
+        btnUpdatePass.setText(" Cambiar Contraseña");
         btnUpdatePass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdatePassActionPerformed(evt);
@@ -996,7 +1018,7 @@ public class App extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(txtNuevaPassUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(btnUpdatePass)
                 .addGap(29, 29, 29))
         );
@@ -1063,14 +1085,16 @@ public class App extends javax.swing.JFrame {
 
         jLabel30.setText("Partido :");
 
-        btnVotar.setText("Votar");
+        btnVotar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/voto.png"))); // NOI18N
+        btnVotar.setText(" Votar");
         btnVotar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVotarActionPerformed(evt);
             }
         });
 
-        btnLimpiar.setText("Limpiar");
+        btnLimpiar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/contenedor-de-basura-simbolo.png"))); // NOI18N
+        btnLimpiar.setText(" Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
@@ -1156,7 +1180,10 @@ public class App extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnIniciarSesion.setText("Iniciar Sesion");
+        btnIniciarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/entrar.png"))); // NOI18N
+        btnIniciarSesion.setText("   Iniciar Sesion");
+        btnIniciarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnIniciarSesion.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         btnIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarSesionActionPerformed(evt);
@@ -1182,27 +1209,27 @@ public class App extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(btnsa))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(lbl1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnIniciarSesion)
-                            .addComponent(txtRunIniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
-                            .addComponent(txtPassInicio)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(btnsa)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtRunIniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                                .addComponent(txtPassInicio)))))
                 .addGap(18, 18, 18)
                 .addComponent(pnlLogoServel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlLogoServel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl1)
@@ -1212,9 +1239,15 @@ public class App extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(txtPassInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnsa)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnIniciarSesion)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnsa)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(btnIniciarSesion)
+                                .addGap(0, 10, Short.MAX_VALUE))))
+                    .addComponent(pnlLogoServel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(36, 36, 36))
         );
 
@@ -1381,11 +1414,6 @@ public class App extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_btnAddVotanteActionPerformed
-
-    private void miChangeAdressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miChangeAdressActionPerformed
-        jfUpdateDatos.setVisible(true);
-        jfUpdateDatos.setLocationRelativeTo(null);
-    }//GEN-LAST:event_miChangeAdressActionPerformed
 
     private void miAddCandidaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAddCandidaturaActionPerformed
         jfAddCandidatura.setVisible(true);
@@ -1812,6 +1840,11 @@ public class App extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtNombrePartidoKeyTyped
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        jfUpdateDatos.setVisible(true);
+        jfUpdateDatos.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1901,6 +1934,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
@@ -1938,7 +1972,6 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JMenuItem miCambiarPassVo;
     private javax.swing.JMenuItem miCerrarSesion;
     private javax.swing.JMenuItem miCerrarSesionVo;
-    private javax.swing.JMenuItem miChangeAdress;
     private javax.swing.JMenuItem miChangePass;
     private javax.swing.JMenuItem miEmitirVoto;
     private javax.swing.JMenuItem miVotarVo;

@@ -51,42 +51,60 @@
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="mePersona">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/red.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Persona"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miAddVotante">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/agregar-usuario.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Inscribir Votante"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miAddVotanteActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="miChangeAdress">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Cambiar Datos"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miChangeAdressActionPerformed"/>
-                  </Events>
-                </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="miChangePass">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/lapiz (1).png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Cambiar Mi Contrase&#xf1;a"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miChangePassActionPerformed"/>
                   </Events>
                 </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/lapiz.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Cambiar Datos"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
+                  </Events>
+                </MenuItem>
               </SubComponents>
             </Menu>
             <Menu class="javax.swing.JMenu" name="meCandidato">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/agregar-usuario.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Candidato"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miAddCandidatura">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/agregar-usuario.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Inscribir Candidatura"/>
                   </Properties>
                   <Events>
@@ -97,11 +115,17 @@
             </Menu>
             <Menu class="javax.swing.JMenu" name="meVotacion">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/lista-de-control-en-un-papel-con-un-lapiz.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Votaci&#xf3;n"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miAddPartido">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/archivo.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Inscribir Partido"/>
                   </Properties>
                   <Events>
@@ -110,6 +134,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="miEmitirVoto">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/voto.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Votar"/>
                   </Properties>
                   <Events>
@@ -120,11 +147,17 @@
             </Menu>
             <Menu class="javax.swing.JMenu" name="meSalir">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/boton-x.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miCerrarSesion">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/logout.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
                   </Properties>
                   <Events>
@@ -186,11 +219,17 @@
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="meVotacionVo">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/lista-de-control-en-un-papel-con-un-lapiz.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Votaci&#xf3;n"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miVotarVo">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/voto.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Votar"/>
                   </Properties>
                   <Events>
@@ -199,6 +238,9 @@
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="miCambiarPassVo">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/lapiz.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Cambiar Contrase&#xf1;a"/>
                   </Properties>
                   <Events>
@@ -209,11 +251,17 @@
             </Menu>
             <Menu class="javax.swing.JMenu" name="meSalirVo">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/boton-x.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Salir"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="miCerrarSesionVo">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/icon/logout.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
                   </Properties>
                   <Events>
@@ -350,7 +398,7 @@
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cboNacionalidad" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="41" max="32767" attributes="0"/>
+                      <EmptySpace pref="31" max="32767" attributes="0"/>
                       <Component id="btnContinuarAdd" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
@@ -437,7 +485,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnContinuarAdd">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Continuar"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/adelante.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Continuar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnContinuarAddActionPerformed"/>
@@ -505,7 +556,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAddVotante">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Registrar Votante"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/nota.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Registrar Votante"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddVotanteActionPerformed"/>
@@ -724,7 +778,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnActVotante">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Actualizar Votante"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/nota.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Actualizar Votante"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActVotanteActionPerformed"/>
@@ -815,7 +872,7 @@
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1028,7 +1085,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnAddCandidatura">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Inscribir Candidatura"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/nota.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Inscribir Candidatura"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddCandidaturaActionPerformed"/>
@@ -1139,7 +1199,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnInscribirPartido">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Inscribir Partido"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/nota.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Inscribir Partido"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnInscribirPartidoActionPerformed"/>
@@ -1229,7 +1292,7 @@
                           <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNuevaPassUpdate" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace pref="39" max="32767" attributes="0"/>
                       <Component id="btnUpdatePass" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
@@ -1260,7 +1323,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnUpdatePass">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cambiar Contrase&#xf1;a"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/clave.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Cambiar Contrase&#xf1;a"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdatePassActionPerformed"/>
@@ -1459,7 +1525,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnVotar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Votar"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/voto.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Votar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVotarActionPerformed"/>
@@ -1469,7 +1538,10 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnLimpiar">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Limpiar"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icon/contenedor-de-basura-simbolo.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value=" Limpiar"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarActionPerformed"/>
@@ -1506,25 +1578,27 @@
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="btnsa" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lbl1" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnIniciarSesion" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtRunIniciar" pref="148" max="32767" attributes="0"/>
-                          <Component id="txtPassInicio" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtRunIniciar" pref="149" max="32767" attributes="0"/>
+                              <Component id="txtPassInicio" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                      <Component id="btnsa" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="pnlLogoServel" min="-2" pref="159" max="-2" attributes="0"/>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1533,7 +1607,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="pnlLogoServel" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lbl1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1545,10 +1618,19 @@
                           <Component id="txtPassInicio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnsa" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnIniciarSesion" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="btnsa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="btnIniciarSesion" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
+                  <Component id="pnlLogoServel" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
           </Group>
@@ -1558,7 +1640,14 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnIniciarSesion">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Iniciar Sesion"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icon/entrar.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="   Iniciar Sesion"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Por defecto"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="4"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIniciarSesionActionPerformed"/>
