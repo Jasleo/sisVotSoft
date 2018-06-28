@@ -330,6 +330,8 @@ INSERT INTO candidato VALUES (null,2,'13458906-2');
 INSERT INTO candidato VALUES (null,3,'16908265-1');
 
 INSERT INTO voto VALUES (null,now(),'8072179-7',1);
+INSERT INTO voto VALUES (null,now(),'13213415-8',2);
+INSERT INTO voto VALUES (null,now(),'18765478-3',2);
 
 
 -- USE sisVot_bd;
@@ -340,3 +342,13 @@ SELECT * FROM persona;
 SELECT * FROM partido;
 SELECT * FROM cuenta;
 SELECT * FROM voto;
+SELECT * FROM candidato;
+
+SELECT * FROM voto WHERE candidato_fk = 2;
+
+SELECT persona.nombre AS 'Nombre', persona.apellido AS 'Apellido', partido.descripcion AS 'Partido', COUNT(voto.id) AS 'Cant Voto'
+FROM persona, partido, voto, candidato
+WHERE persona.rut = voto.votante_fk
+AND persona.rut = candidato.persona_fk
+AND partido.id = candidato.partido_fk
+AND voto.candidato_fk = 5;

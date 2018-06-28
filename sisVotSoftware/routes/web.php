@@ -70,3 +70,7 @@ $router->get('/api/v1/getCandidato/{rut}', function ($rut) {
 $router->get('/api/v1/getCuenta/{rut}', function ($rut) {
     return $results = DB::select("SELECT * FROM cuenta WHERE rutPersona_fk like '$rut'");
 });
+
+$router->get('/api/v1/getCantVotos/{id}', function ($id) {
+    return $results = DB::select("SELECT COUNT(*) AS 'cantVoto' FROM voto WHERE candidato_fk = $id");
+});

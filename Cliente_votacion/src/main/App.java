@@ -1255,6 +1255,8 @@ public class App extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
+        System.out.println("VOTOS DEL CAN 2 : " + data.getCantidadVoto(2));
+        
         String rut, clave;
         rut = txtRunIniciar.getText();
         clave = txtPassInicio.getText();
