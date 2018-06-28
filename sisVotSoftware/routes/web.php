@@ -74,3 +74,7 @@ $router->get('/api/v1/getCuenta/{rut}', function ($rut) {
 $router->get('/api/v1/getCantVotos/{id}', function ($id) {
     return $results = DB::select("SELECT COUNT(*) AS 'cantVoto' FROM voto WHERE candidato_fk = $id");
 });
+
+$router->get('/api/v1/getCantVotosTotal', function () {
+    return $results = DB::select("SELECT COUNT(*) AS 'cantVoto' FROM voto");
+});

@@ -28,6 +28,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import tableModels.TMPersona;
+import tableModels.TMResultado;
 import tableModels.TM_MostrarCandidato;
 
 public class App extends javax.swing.JFrame {
@@ -71,6 +72,7 @@ public class App extends javax.swing.JFrame {
         meVotacion = new javax.swing.JMenu();
         miAddPartido = new javax.swing.JMenuItem();
         miEmitirVoto = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         meSalir = new javax.swing.JMenu();
         miCerrarSesion = new javax.swing.JMenuItem();
         jfMenuUserComun = new javax.swing.JFrame();
@@ -170,6 +172,11 @@ public class App extends javax.swing.JFrame {
         btnVotar = new javax.swing.JButton();
         lblIdCandidato = new javax.swing.JLabel();
         btnLimpiar = new javax.swing.JButton();
+        jfVerVotacion = new javax.swing.JFrame();
+        jPanel11 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tblResultados = new javax.swing.JTable();
         btnIniciarSesion = new javax.swing.JButton();
         lbl1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -257,6 +264,15 @@ public class App extends javax.swing.JFrame {
             }
         });
         meVotacion.add(miEmitirVoto);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/res.png"))); // NOI18N
+        jMenuItem2.setText("Resultados");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        meVotacion.add(jMenuItem2);
 
         menAdmin.add(meVotacion);
 
@@ -1178,6 +1194,68 @@ public class App extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Resultados"));
+
+        jButton1.setText("Ver Resultados");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        tblResultados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(tblResultados);
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton1)
+                .addGap(20, 20, 20)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jfVerVotacionLayout = new javax.swing.GroupLayout(jfVerVotacion.getContentPane());
+        jfVerVotacion.getContentPane().setLayout(jfVerVotacionLayout);
+        jfVerVotacionLayout.setHorizontalGroup(
+            jfVerVotacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jfVerVotacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jfVerVotacionLayout.setVerticalGroup(
+            jfVerVotacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jfVerVotacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnIniciarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/entrar.png"))); // NOI18N
@@ -1198,6 +1276,17 @@ public class App extends javax.swing.JFrame {
         btnsa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnsaActionPerformed(evt);
+            }
+        });
+
+        txtPassInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassInicioActionPerformed(evt);
+            }
+        });
+        txtPassInicio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtPassInicioKeyReleased(evt);
             }
         });
 
@@ -1240,13 +1329,11 @@ public class App extends javax.swing.JFrame {
                             .addComponent(txtPassInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnsa)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnsa)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(27, 27, 27)
-                                .addComponent(btnIniciarSesion)
-                                .addGap(0, 10, Short.MAX_VALUE))))
+                                .addComponent(btnIniciarSesion)))
+                        .addGap(0, 10, Short.MAX_VALUE))
                     .addComponent(pnlLogoServel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(36, 36, 36))
         );
@@ -1256,7 +1343,7 @@ public class App extends javax.swing.JFrame {
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
         System.out.println("VOTOS DEL CAN 2 : " + data.getCantidadVoto(2));
-        
+
         String rut, clave;
         rut = txtRunIniciar.getText();
         clave = txtPassInicio.getText();
@@ -1264,7 +1351,7 @@ public class App extends javax.swing.JFrame {
         listCuenta = data.getListaCuentas();
 
         for (Cuenta c : listCuenta) {
-            if (c.getRutPersona_fk().equalsIgnoreCase(rut) && c.getPass().equalsIgnoreCase(clave)) {
+            if (c.getRutPersona_fk().equalsIgnoreCase(rut) && c.getPass().equals(clave)) {
                 privilegio = c.getPrivilegio_fk();
                 rutPersonaActual = c.getRutPersona_fk();
             }
@@ -1315,6 +1402,8 @@ public class App extends javax.swing.JFrame {
         this.setVisible(true);
 
         EstadoVoto(rutPersonaActual);
+        privilegio = 0;
+        rutPersonaActual = "";
     }//GEN-LAST:event_miCerrarSesionActionPerformed
 
     private void miCerrarSesionVoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCerrarSesionVoActionPerformed
@@ -1322,6 +1411,8 @@ public class App extends javax.swing.JFrame {
         this.setVisible(true);
 
         EstadoVoto(rutPersonaActual);
+        privilegio = 0;
+        rutPersonaActual = "";
     }//GEN-LAST:event_miCerrarSesionVoActionPerformed
 
     private void miAddVotanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAddVotanteActionPerformed
@@ -1847,6 +1938,72 @@ public class App extends javax.swing.JFrame {
         jfUpdateDatos.setLocationRelativeTo(null);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        jfVerVotacion.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        cargarDatosResultados();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtPassInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassInicioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassInicioActionPerformed
+
+    private void txtPassInicioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassInicioKeyReleased
+        if (evt.getExtendedKeyCode() == evt.VK_ENTER) {
+            String rut, clave;
+            rut = txtRunIniciar.getText();
+            clave = txtPassInicio.getText();
+
+            listCuenta = data.getListaCuentas();
+
+            for (Cuenta c : listCuenta) {
+                if (c.getRutPersona_fk().equalsIgnoreCase(rut) && c.getPass().equalsIgnoreCase(clave)) {
+                    privilegio = c.getPrivilegio_fk();
+                    rutPersonaActual = c.getRutPersona_fk();
+                }
+            }
+
+            if (privilegio == 1) {
+                txtRunIniciar.setText("");
+                txtPassInicio.setText("");
+
+                this.setVisible(false);
+                jfMenuAdmin.setVisible(true);
+                jfMenuAdmin.setLocationRelativeTo(null);
+
+                JOptionPane.showMessageDialog(this, "Bienvenido Administrador");
+
+            } else if (privilegio == 2) {
+                txtRunIniciar.setText("");
+                txtPassInicio.setText("");
+
+                this.setVisible(false);
+                jfMenuUserComun.setVisible(true);
+                jfMenuUserComun.setLocationRelativeTo(null);
+
+                JOptionPane.showMessageDialog(this, "Bienvenido Votante");
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Error Al Iniciar Sesión");
+                txtRunIniciar.setText("");
+                txtPassInicio.setText("");
+            }
+
+            /* para ver si ya voto el usuario logeado */
+            sufrago = EstadoVoto(rut);
+
+            if (privilegio == 1 && sufrago) {
+                miEmitirVoto.setEnabled(false);
+            }
+
+            if (privilegio == 2 && sufrago) {
+                miVotarVo.setEnabled(false);
+            }
+        }
+    }//GEN-LAST:event_txtPassInicioKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -1906,6 +2063,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JComboBox cboNacionalidad;
     private javax.swing.JComboBox cboPaisResidencia;
     private javax.swing.JComboBox cboPartidoCand;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1937,8 +2095,10 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1950,6 +2110,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JFrame jfAddCandidatura;
     private javax.swing.JFrame jfEjercerVoto;
     private javax.swing.JFrame jfIncribirPersona;
@@ -1958,6 +2119,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JFrame jfMenuUserComun;
     private javax.swing.JFrame jfUpdateDatos;
     private javax.swing.JFrame jfUpdatePass;
+    private javax.swing.JFrame jfVerVotacion;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblIdCandidato;
     private javax.swing.JLabel lblPassGenerada;
@@ -1983,6 +2145,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTable tblBuscarPersonaCandidato;
     private javax.swing.JTable tblBuscarPersonaUp;
     private javax.swing.JTable tblCandidatos;
+    private javax.swing.JTable tblResultados;
     private javax.swing.JTextField txtActApellido;
     private javax.swing.JTextField txtActDireccion;
     private javax.swing.JTextField txtActEdad;
@@ -2052,6 +2215,8 @@ public class App extends javax.swing.JFrame {
         jfUpdatePass.setBounds(0, 0, 450, 350);
 
         jfEjercerVoto.setBounds(0, 0, 700, 380);
+
+        jfVerVotacion.setBounds(0, 0, 700, 380);
     }
 
     // llenar el combobox de paises
@@ -2138,6 +2303,21 @@ public class App extends javax.swing.JFrame {
 
         TM_MostrarCandidato tmCan = new TM_MostrarCandidato(listPersonaCandidato);
         tblCandidatos.setModel(tmCan);
+
+    }
+
+    private void cargarDatosResultados() {
+        //llenando la tabla de candidatos al votar
+        listPersonaCandidato = new ArrayList<>();
+        MostrarCandidato mo = new MostrarCandidato();
+
+        for (CandidatoSelect canS : data.getListaCandidatos()) {
+            mo = data.getCandidatosParaVotar(canS.getPersona_fk());
+            listPersonaCandidato.add(mo);
+        }
+
+        TMResultado tmCan = new TMResultado(listPersonaCandidato);
+        tblResultados.setModel(tmCan);
 
     }
 

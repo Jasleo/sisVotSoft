@@ -11,6 +11,12 @@ public class CantidadVoto {
 
     public CantidadVoto() {
     }
+
+    public CantidadVoto(int cantVoto) {
+        this.cantVoto = cantVoto;
+    }
+    
+    
     
 
     public int getIdCandidato() {

@@ -344,6 +344,41 @@ public class Data {
         return cantidad;
     }
 
+    public int getCantidadVotosTotal() {
+        int cantidad = 0;
+
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("http://localhost:8000/api/v1/getCantVotosTotal")
+                .get()
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", "2e2df737-cee0-6179-2c54-786a153e0916")
+                .build();
+
+        try {
+            Response response = client.newCall(request).execute();
+            String respuesta = response.body().string();
+
+            CantidadVoto[] per;
+            per = mapper.readValue(respuesta, CantidadVoto[].class);
+
+            List<CantidadVoto> lista = Arrays.asList(per);
+
+            CantidadVoto cantidadVoto = new CantidadVoto();
+
+            for (CantidadVoto cv : lista) {
+                cantidadVoto = new CantidadVoto(cv.getCantVoto());
+            }
+            return cantidadVoto.getCantVoto();
+
+        } catch (IOException ex) {
+            Logger.getLogger(Data.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return cantidad;
+    }
+
     public Cuenta getCuentaByRut(String rut) {
         OkHttpClient client = new OkHttpClient();
 
